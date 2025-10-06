@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AgeCardsSection from './components/AgeCardsSection';
@@ -46,6 +47,9 @@ function App() {
       <div id="contact">
         <Footer />
       </div>
+      
+      {/* Vercel Analytics */}
+      <Analytics />
     </div>
   );
 }
