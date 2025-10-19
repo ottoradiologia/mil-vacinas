@@ -10,8 +10,8 @@ const Footer = () => {
     {
       icon: Phone,
       label: 'WhatsApp',
-      value: '(11) 99407-7447',
-      link: 'https://wa.me/5511994077447'
+      value: '(11) 97313-9542',
+      link: 'https://wa.me/5511973139542'
     },
     {
       icon: Mail,
@@ -202,7 +202,7 @@ const Footer = () => {
           {/* Botões de Contato */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
-              href="https://wa.me/5511994077447"
+              href="https://wa.me/5511973139542"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-center inline-flex items-center justify-center gap-2"

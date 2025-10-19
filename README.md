@@ -22,7 +22,7 @@ O prédio não possui estacionamento próprio, mas há diversas opções de esta
 
 ## 📞 Contato
 
-- **WhatsApp:** (11) 99407-7447
+- **WhatsApp:** (11) 97313-9542
 - **Email:** milvacinas@gmail.com
 - **Horário de Funcionamento:** 
   - Seg-Sex: 8h às 18h
@@ -132,7 +132,7 @@ Este projeto é propriedade da clínica Mil Vacinas e Pediatria.
 
 ## 🤝 Contribuição
 
-Para contribuições ou sugestões, entre em contato através do WhatsApp: (11) 99407-7447
+Para contribuições ou sugestões, entre em contato através do WhatsApp: (11) 97313-9542
 
 ---
 

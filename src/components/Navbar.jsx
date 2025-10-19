@@ -61,7 +61,7 @@ const Navbar = () => {
             
             {/* CTA Button */}
             <button
-              onClick={() => window.open('https://wa.me/5511994077447', '_blank')}
+              onClick={() => window.open('https://wa.me/5511973139542', '_blank')}
               className="btn-primary text-sm px-4 py-2"
             >
               Agendar
@@ -94,7 +94,7 @@ const Navbar = () => {
               
               <div className="pt-4 border-t border-gray-200">
                 <button
-                  onClick={() => window.open('https://wa.me/5511994077447', '_blank')}
+                  onClick={() => window.open('https://wa.me/5511973139542', '_blank')}
                   className="w-full btn-primary text-center"
                 >
                   Agendar pelo WhatsApp

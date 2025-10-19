@@ -89,7 +89,7 @@ const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="md"
-                onClick={() => window.open('https://wa.me/5511994077447', '_blank')}
+                onClick={() => window.open('https://wa.me/5511973139542', '_blank')}
                 className="text-sm px-5 py-2.5 border-2 border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">

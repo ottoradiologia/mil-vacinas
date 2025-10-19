@@ -20,7 +20,7 @@ const PlanSection = () => {
 
   const handleConsultConditions = () => {
     const message = 'Olá! Gostaria de saber mais sobre o Plano Vacina e suas condições. Podem me ajudar?';
-    const whatsappUrl = `https://wa.me/5511994077447?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5511973139542?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 

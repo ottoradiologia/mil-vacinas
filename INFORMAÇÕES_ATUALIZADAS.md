@@ -8,7 +8,7 @@
 - **CRM-SP**: 140.995
 
 ### 📞 Contatos Atualizados
-- **WhatsApp**: (11) 99407-7447
+- **WhatsApp**: (11) 97313-9542
 - **Email**: fernandafavalikruger@gmail.com
 
 ### 📍 Endereço Completo
@@ -40,7 +40,7 @@
 
 ### 1. WhatsApp Atualizado
 - **Antes**: 5511999999999 (exemplo)
-- **Depois**: 5511994077447 (número real)
+- **Depois**: 5511973139542 (número real)
 - **Localizações atualizadas**:
   - Hero Section
   - Navbar (desktop e mobile)
@@ -133,7 +133,7 @@
 ## 📞 Informações Finais
 
 ### Contatos Ativos
-- **WhatsApp**: (11) 99407-7447
+- **WhatsApp**: (11) 97313-9542
 - **Email**: fernandafavalikruger@gmail.com
 
 ### Localização
