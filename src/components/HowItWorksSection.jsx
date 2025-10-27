@@ -2,7 +2,7 @@ import React from 'react';
 import Section from './Section';
 import Card from './Card';
 import Button from './Button';
-import { MapPin, Calendar, Building2 } from 'lucide-react';
+import { MapPin, Calendar, Building2, CreditCard } from 'lucide-react';
 
 const HowItWorksSection = () => {
   const steps = [
@@ -20,6 +20,11 @@ const HowItWorksSection = () => {
       icon: Building2,
       title: 'Venha até nossa clínica',
       description: 'Compareça no dia e hora agendados para realizar sua vacinação com conforto e segurança'
+    },
+    {
+      icon: CreditCard,
+      title: 'Forma de pagamento',
+      description: 'Aceitamos Pix, Dinheiro, Cartão de Crédito e Débito ou Link de Pagamento'
     }
   ];
 
@@ -33,15 +38,12 @@ const HowItWorksSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">
           Como funciona?
         </h2>
-        <p className="text-xl opacity-90 max-w-2xl mx-auto mb-3">
+        <p className="text-xl opacity-90 max-w-2xl mx-auto">
           Processo simples e seguro para agendar sua vacinação presencial
-        </p>
-        <p className="text-lg opacity-95 max-w-xl mx-auto font-semibold">
-          💳 Aceitamos Pix, Dinheiro, Cartão de Crédito e Débito
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
         {steps.map((step, index) => {
           const IconComponent = step.icon;
           return (
