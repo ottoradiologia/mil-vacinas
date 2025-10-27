@@ -38,7 +38,7 @@ export const vaccinesData = {
       'Vacina Hepatite A',
       'Vacina Hepatite A+B',
       'Vacina Influenza Quadrivalente',
-      'Vacina Pneumocócica 20 (Aguardando chegada)',
+      'Vacina Pneumocócica 20',
       'Vacina Pneumocócica 13',
       'Vacina Pneumocócica 15'
     ]
@@ -60,7 +60,7 @@ export const vaccinesData = {
       'Vacina Influenza Quadrivalente',
       'Vacina Meningocócica ACWY',
       'Vacina Meningocócica B',
-      'Vacina Pneumocócica 20 (Aguardando chegada)',
+      'Vacina Pneumocócica 20',
       'Vacina Dengue'
     ]
   },
@@ -72,8 +72,7 @@ export const vaccinesData = {
       'Vacina Hepatite B',
       'Vacina Tríplice Bacteriana Dtpa',
       'Vacina Influenza Quadrivalente',
-      'Vacina Imunoglobulina Anti Rh',
-      'Vacina VSR (Aguardando chegada)'
+      'Vacina VSR (Vírus Sincicial Respiratório)'
     ]
   },
   idoso: {
@@ -89,7 +88,7 @@ export const vaccinesData = {
       'Vacina VSR (Vírus Sincicial Respiratório)',
       'Vacina Influenza Quadrivalente 60+',
       'Vacina Hepatite A+B',
-      'Vacina Pneumocócica 20 (Aguardando chegada)',
+      'Vacina Pneumocócica 20',
       'Vacina Meningocócica ACWY',
       'Vacina Herpes Zoster',
       'Vacina Influenza Quadrivalente'
