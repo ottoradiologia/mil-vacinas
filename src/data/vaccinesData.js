@@ -21,7 +21,8 @@ export const vaccinesData = {
       'Vacina Tríplice Bacteriana DTPA-VIP',
       'Vacina Dengue',
       'Vacina HPV Nona Valente',
-      'Vacina Pneumocócica 20'
+      'Vacina Pneumocócica 20',
+      'Beyfortus (nirsevimabe)'
     ]
   },
   adolescente: {
