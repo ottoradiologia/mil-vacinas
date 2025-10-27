@@ -53,15 +53,14 @@ export const vaccinesData = {
       'Vacina Tríplice Viral',
       'Vacina Varicela',
       'Vacina Febre Amarela',
-      'Vacina Febre Tifoide',
       'Vacina Pneumocócica 13',
       'Vacina Pneumocócica 15',
-      'Vacina Pneumocócica 23',
       'Vacina Influenza Quadrivalente',
       'Vacina Meningocócica ACWY',
       'Vacina Meningocócica B',
       'Vacina Pneumocócica 20',
-      'Vacina Dengue'
+      'Vacina Dengue',
+      'Vacina HPV Nonavalente'
     ]
   },
   gestante: {
@@ -84,7 +83,6 @@ export const vaccinesData = {
       'Vacina Tríplice Bacteriana Dtpa',
       'Vacina Pneumocócica 13',
       'Vacina Pneumocócica 15',
-      'Vacina Pneumocócica 23',
       'Vacina VSR (Vírus Sincicial Respiratório)',
       'Vacina Influenza Quadrivalente 60+',
       'Vacina Hepatite A+B',
