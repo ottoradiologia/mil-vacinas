@@ -24,7 +24,7 @@ const AgeCardsSection = () => {
     {
       id: 'adulto',
       title: 'Adulto',
-      subtitle: '20-50 anos',
+      subtitle: '20-59 anos',
       icon: Users,
       image: '/assets/images/adulto.png',
       description: 'Manutenção da imunidade e prevenção de doenças'

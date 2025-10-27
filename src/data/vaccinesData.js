@@ -45,7 +45,7 @@ export const vaccinesData = {
   },
   adulto: {
     title: 'Para Adultos',
-    subtitle: '20-50 anos',
+    subtitle: '20-59 anos',
     icon: 'Users',
     vaccines: [
       'Vacina Hepatite A+B',

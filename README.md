@@ -18,15 +18,14 @@ A **Mil Vacinas e Pediatria** é uma clínica especializada em vacinação prese
 
 ## 🚗 Estacionamento
 
-O prédio não possui estacionamento próprio, mas há diversas opções de estacionamento em frente e ao redor da clínica.
+**Não possuímos estacionamento próprio.** No entanto, há diversas opções de estacionamentos em frente e ao redor da clínica que você pode utilizar.
 
 ## 📞 Contato
 
 - **WhatsApp:** (11) 97313-9542
 - **Email:** milvacinas@gmail.com
 - **Horário de Funcionamento:** 
-  - Seg-Sex: 8h às 18h
-  - Sáb: 8h às 12h
+  - Seg-Sex: 9h às 18h
 
 ## 🛠️ Tecnologias Utilizadas
 

@@ -28,7 +28,7 @@ const PlanSection = () => {
     <Section backgroundColor="primary" className="text-white">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">
-          Faça um Plano Vacina
+          Faça um Plano Vacinal
         </h2>
         <p className="text-xl opacity-90 max-w-2xl mx-auto">
           Garanta a proteção completa da sua família com nosso plano especial

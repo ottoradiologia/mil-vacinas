@@ -17,7 +17,7 @@ const HeroSection = () => {
         <img 
           src="/assets/images/fundo-hero.png" 
           alt="Família" 
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-left md:object-center"
         />
         {/* Overlay mais forte à esquerda */}
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/30"></div>
@@ -28,54 +28,40 @@ const HeroSection = () => {
           {/* Coluna da esquerda: Conteúdo */}
           <div className="space-y-6 px-4 lg:px-0">
             {/* Logo maior */}
-            <div className="mb-6">
+            <div className="mb-6 flex justify-center lg:justify-start">
               <img 
                 src="/assets/images/Mil-logomarca.png" 
                 alt="Mil Vacinas" 
-                className="h-56 md:h-64 lg:h-72 xl:h-80 w-auto drop-shadow-2xl"
+                className="h-96 md:h-[28rem] lg:h-96 xl:h-[32rem] w-auto drop-shadow-2xl"
               />
             </div>
             {/* Badge de destaque */}
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-              Clínica Especializada em Vacinação
+            <div className="flex justify-center lg:justify-start">
+              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                Clínica Especializada em Vacinação
+              </div>
             </div>
             
             {/* Título principal */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text leading-tight text-center lg:text-left">
               <span className="block">Proteção</span>
               <span className="block">Completa para</span>
               <span className="block text-primary relative inline-block">
                 Toda a Família
                 {/* Linha decorativa */}
-                <div className="absolute -bottom-1 left-0 w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+                <div className="absolute -bottom-1 left-0 lg:left-0 w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto lg:mx-0"></div>
               </span>
             </h1>
             
             {/* Subtítulo */}
-            <p className="text-base md:text-lg text-textSecondary leading-relaxed max-w-lg">
+            <p className="text-base md:text-lg text-textSecondary leading-relaxed max-w-lg text-center lg:text-left mx-auto lg:mx-0">
               Agende sua vacinação presencial em nossa clínica com segurança, 
               conforto e profissionais especializados. Sua saúde é nossa prioridade.
             </p>
             
-            {/* Destaque da médica - mais compacto */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-primary/20 max-w-md">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                    <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
-                  </svg>
-                </div>
-                <div>
-                  <p className="font-bold text-text text-sm">Dra. Fernanda Favali Kruger</p>
-                  <p className="text-xs text-textSecondary">Pediatra - CRM-SP 140.995</p>
-                </div>
-              </div>
-            </div>
-            
             {/* CTAs - mais compactos */}
-            <div className="flex flex-col sm:flex-row gap-3 max-w-lg">
+            <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto lg:mx-0">
               <Button 
                 size="md" 
                 onClick={scrollToAgeCards}

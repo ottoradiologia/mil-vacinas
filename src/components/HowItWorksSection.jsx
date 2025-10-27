@@ -24,7 +24,7 @@ const HowItWorksSection = () => {
   ];
 
   const handleScheduleClick = () => {
-    window.open('https://wa.me/5511994077447', '_blank');
+    window.open('https://wa.me/5511973139542', '_blank');
   };
 
   return (
@@ -72,11 +72,11 @@ const HowItWorksSection = () => {
 
       {/* CTA Principal */}
       <div className="text-center">
-        <div className="mb-6">
-          <p className="text-lg opacity-90 mb-4">
-            <strong>IMPORTANTE:</strong> Agendamento para atendimento <strong>PRESENCIAL</strong> na clínica
+        <div className="mb-6 bg-white/95 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto border-2 border-white shadow-xl">
+          <p className="text-xl font-bold text-text mb-3">
+            <span className="text-accent">IMPORTANTE:</span> Agendamento para atendimento <span className="text-accent">PRESENCIAL</span> na clínica
           </p>
-          <p className="text-sm opacity-80">
+          <p className="text-lg font-semibold text-text">
             Não realizamos visitas domiciliares
           </p>
         </div>
