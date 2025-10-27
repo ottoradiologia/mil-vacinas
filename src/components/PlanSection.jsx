@@ -31,7 +31,7 @@ const PlanSection = () => {
           Faça um Plano Vacinal
         </h2>
         <p className="text-xl opacity-90 max-w-2xl mx-auto">
-          Garanta a proteção completa da sua família com nosso plano especial
+          Condições especiais para plano vacinal
         </p>
       </div>
 

@@ -33,8 +33,11 @@ const HowItWorksSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">
           Como funciona?
         </h2>
-        <p className="text-xl opacity-90 max-w-2xl mx-auto">
+        <p className="text-xl opacity-90 max-w-2xl mx-auto mb-3">
           Processo simples e seguro para agendar sua vacinação presencial
+        </p>
+        <p className="text-lg opacity-95 max-w-xl mx-auto font-semibold">
+          💳 Aceitamos Pix, Dinheiro, Cartão de Crédito e Débito
         </p>
       </div>
 
