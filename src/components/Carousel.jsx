@@ -39,7 +39,7 @@ const Carousel = ({ images, autoPlay = true, interval = 4000 }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Container das imagens */}
+      {/* Container das imagens e vídeos */}
       <div className="relative aspect-[16/10] bg-gray-100">
         {images.map((image, index) => (
           <div
@@ -48,12 +48,23 @@ const Carousel = ({ images, autoPlay = true, interval = 4000 }) => {
               index === currentIndex ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-full object-contain"
-              style={{ backgroundColor: '#f3f4f6' }}
-            />
+            {image.type === 'video' ? (
+              <video
+                src={image.src}
+                className="w-full h-full object-contain"
+                style={{ backgroundColor: '#f3f4f6' }}
+                controls
+                loop
+                muted
+              />
+            ) : (
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-contain"
+                style={{ backgroundColor: '#f3f4f6' }}
+              />
+            )}
             {/* Overlay com gradiente para melhor legibilidade do título */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
             

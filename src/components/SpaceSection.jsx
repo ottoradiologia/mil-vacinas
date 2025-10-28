@@ -58,6 +58,19 @@ const SpaceSection = () => {
       alt: 'Sala de vacinação 3',
       title: 'Tecnologia e Cuidado',
       description: 'Infraestrutura de ponta para melhor atendimento'
+    },
+    {
+      src: '/assets/images/consultorio/geladeira.jpg',
+      alt: 'Geladeira para armazenamento de vacinas',
+      title: 'Armazenamento Seguro',
+      description: 'Refrigeração adequada para conservação das vacinas'
+    },
+    {
+      src: '/assets/images/consultorio/video-vacina.mp4',
+      alt: 'Processo de vacinação',
+      title: 'Nosso Processo de Vacinação',
+      description: 'Técnica precisa e cuidadosa em cada aplicação',
+      type: 'video'
     }
   ];
 
