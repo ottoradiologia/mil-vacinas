@@ -11,8 +11,8 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden bg-white">
-      {/* Imagem de fundo */}
-      <div className="absolute inset-0">
+      {/* Imagem de fundo - Oculto em telas pequenas */}
+      <div className="hidden lg:block absolute inset-0">
         <img 
           src="/assets/images/fundo-hero.png" 
           alt="Família" 
