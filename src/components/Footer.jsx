@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from './Logo';
 import GoogleMaps from './GoogleMaps';
-import { Phone, Mail, MapPin, Clock, Navigation, Train, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Navigation, Train, Instagram, Info } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -28,7 +28,7 @@ const Footer = () => {
     {
       icon: Clock,
       label: 'Horário de Funcionamento',
-      value: 'Seg-Sex: 8h às 18h | Sáb: 8h às 12h',
+      value: 'Seg-Sex: 9h às 18h',
       link: null
     }
   ];
@@ -166,14 +166,11 @@ const Footer = () => {
                   <div className="p-3 bg-blue-50 rounded-lg border border-blue-100">
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mt-0.5">
-                        <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                        </svg>
+                        <Info size={14} className="text-white" />
                       </div>
                       <div className="flex-1">
-                        <h5 className="font-bold text-text text-sm mb-1">Estacionamento</h5>
-                        <p className="text-textSecondary text-xs leading-relaxed">
-                          O prédio não possui estacionamento próprio, mas há diversas opções em frente e ao redor da clínica.
+                        <p className="text-text text-sm leading-relaxed">
+                          <strong>Não possuímos estacionamento próprio.</strong> No entanto, há diversas opções de estacionamentos em frente e ao redor da clínica que você pode utilizar.
                         </p>
                       </div>
                     </div>

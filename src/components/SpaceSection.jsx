@@ -136,7 +136,7 @@ const SpaceSection = () => {
             receber você e sua família com todo carinho e profissionalismo.
           </p>
           <button
-            onClick={() => window.open('https://wa.me/5511994077447', '_blank')}
+            onClick={() => window.open('https://wa.me/5511973139542', '_blank')}
             className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
