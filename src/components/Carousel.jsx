@@ -70,7 +70,7 @@ const Carousel = ({ images, autoPlay = true, interval = 4000 }) => {
             
             {/* Título da imagem */}
             {image.title && (
-              <div className="absolute bottom-0 left-0 right-0 p-3 md:p-6 text-white">
+              <div className="absolute top-0 left-0 right-0 p-3 md:p-6 text-white bg-gradient-to-b from-black/60 to-transparent">
                 <h3 className="text-sm md:text-2xl font-bold md:mb-2 drop-shadow-lg">{image.title}</h3>
                 {image.description && (
                   <p className="hidden md:block text-white/90 drop-shadow-lg">{image.description}</p>
