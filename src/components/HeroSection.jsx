@@ -11,12 +11,12 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden bg-white">
-      {/* Imagem de fundo - Oculto em telas pequenas */}
-      <div className="hidden lg:block absolute inset-0">
+      {/* Imagem de fundo */}
+      <div className="absolute inset-0">
         <img 
           src="/assets/images/fundo-hero.png" 
           alt="Família" 
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover brightness-110"
         />
       </div>
 
@@ -53,7 +53,7 @@ const HeroSection = () => {
             
             {/* Subtítulo */}
             <p className="text-base md:text-lg text-textSecondary leading-relaxed max-w-lg text-center lg:text-left mx-auto lg:mx-0">
-              Agende sua vacinação come profissionais especializados no Paraíso, São Paulo.
+              Agende sua vacinação com profissionais especializados no bairro do Paraíso, São Paulo.
             </p>
             
             {/* CTAs - mais compactos */}
