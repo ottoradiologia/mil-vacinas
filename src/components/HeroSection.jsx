@@ -23,16 +23,16 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/30"></div>
       </div>
 
-      <div className="container-max relative z-10 py-20">
+      <div className="container-max relative z-10 py-12 sm:py-16 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Coluna da esquerda: Conteúdo */}
-          <div className="space-y-6 px-4 lg:px-0">
+          <div className="space-y-4 sm:space-y-6 px-4 lg:px-0">
             {/* Logo maior */}
-            <div className="mb-6 flex justify-center lg:justify-start">
+            <div className="mb-4 sm:mb-6 flex justify-center lg:justify-start">
               <img 
                 src="/assets/images/Mil-logomarca.png" 
                 alt="Mil Vacinas" 
-                className="h-96 md:h-[28rem] lg:h-96 xl:h-[32rem] w-auto drop-shadow-2xl"
+                className="h-64 sm:h-80 md:h-96 lg:h-96 xl:h-[32rem] w-auto drop-shadow-2xl"
               />
             </div>
             {/* Badge de destaque */}
@@ -61,7 +61,7 @@ const HeroSection = () => {
             </p>
             
             {/* CTAs - mais compactos */}
-            <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto lg:mx-0">
+            <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto lg:mx-0 pb-8 md:pb-0">
               <Button 
                 size="md" 
                 onClick={scrollToAgeCards}
@@ -93,8 +93,8 @@ const HeroSection = () => {
         </div>
       </div>
         
-      {/* Indicador de scroll melhorado */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      {/* Indicador de scroll melhorado - Oculto em telas pequenas */}
+      <div className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
         <button
           onClick={scrollToAgeCards}
           className="group flex flex-col items-center gap-2 text-primary hover:text-primary/80 transition-all duration-300"

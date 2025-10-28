@@ -68,7 +68,7 @@ const SpaceSection = () => {
     {
       src: '/assets/images/consultorio/video-vacina.mp4',
       alt: 'Processo de vacinação',
-      title: 'Nosso Processo de Vacinação',
+      title: 'Nossa Sala de Vacinação',
       description: 'Técnica precisa e cuidadosa em cada aplicação',
       type: 'video'
     }
