@@ -1,7 +1,6 @@
 import React from 'react';
 import Logo from './Logo';
 import Button from './Button';
-import { ArrowDown } from 'lucide-react';
 
 const HeroSection = () => {
   const scrollToAgeCards = () => {
@@ -11,16 +10,14 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center relative overflow-hidden">
-      {/* Imagem de fundo */}
-      <div className="absolute inset-0">
+    <section className="min-h-screen flex items-center relative overflow-hidden bg-white">
+      {/* Imagem de fundo - Oculto em telas pequenas */}
+      <div className="hidden lg:block absolute inset-0">
         <img 
           src="/assets/images/fundo-hero.png" 
           alt="Família" 
-          className="w-full h-full object-cover object-left md:object-center"
+          className="w-full h-full object-contain"
         />
-        {/* Overlay mais forte à esquerda */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/30"></div>
       </div>
 
       <div className="container-max relative z-10 py-12 sm:py-16 md:py-20">
@@ -56,8 +53,7 @@ const HeroSection = () => {
             
             {/* Subtítulo */}
             <p className="text-base md:text-lg text-textSecondary leading-relaxed max-w-lg text-center lg:text-left mx-auto lg:mx-0">
-              Agende sua vacinação presencial em nossa clínica com segurança, 
-              conforto e profissionais especializados. Sua saúde é nossa prioridade.
+              Agende sua vacinação come profissionais especializados no Paraíso, São Paulo.
             </p>
             
             {/* CTAs - mais compactos */}
@@ -91,20 +87,6 @@ const HeroSection = () => {
             {/* Espaço reservado para a imagem de fundo */}
           </div>
         </div>
-      </div>
-        
-      {/* Indicador de scroll melhorado - Oculto em telas pequenas */}
-      <div className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <button
-          onClick={scrollToAgeCards}
-          className="group flex flex-col items-center gap-2 text-primary hover:text-primary/80 transition-all duration-300"
-          aria-label="Rolar para baixo"
-        >
-          <span className="text-sm font-medium group-hover:translate-y-1 transition-transform duration-300">Descobrir mais</span>
-          <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
-          </div>
-        </button>
       </div>
     </section>
   );
