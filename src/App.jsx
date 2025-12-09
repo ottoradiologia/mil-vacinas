@@ -1,5 +1,6 @@
 import React from 'react';
 import { Analytics } from '@vercel/analytics/react';
+import { LanguageProvider } from './contexts/LanguageContext';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AgeCardsSection from './components/AgeCardsSection';
@@ -11,7 +12,8 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <LanguageProvider>
+      <div className="min-h-screen bg-white">
       {/* Navbar */}
       <Navbar />
       
@@ -50,7 +52,8 @@ function App() {
       
       {/* Vercel Analytics */}
       <Analytics />
-    </div>
+      </div>
+    </LanguageProvider>
   );
 }
 

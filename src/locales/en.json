@@ -1,0 +1,247 @@
+{
+  "nav": {
+    "home": "Home",
+    "ageCards": "Age Groups",
+    "howItWorks": "How It Works",
+    "vaccines": "Vaccines",
+    "plan": "Vaccine Plan",
+    "space": "Our Space",
+    "contact": "Contact",
+    "schedule": "Schedule",
+    "scheduleWhatsApp": "Schedule via WhatsApp",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "Specialized Vaccination Clinic",
+    "title1": "Complete",
+    "title2": "Protection for",
+    "title3": "The Whole Family",
+    "subtitle": "Schedule your vaccination with specialized professionals in Paraíso, São Paulo.",
+    "button1": "View Available Vaccines",
+    "button2": "Schedule via WhatsApp"
+  },
+  "ageCards": {
+    "title": "Who are you looking to protect?",
+    "subtitle": "Select the age group to see specific available vaccines",
+    "categories": {
+      "crianca": {
+        "title": "Child",
+        "subtitle": "0-12 years",
+        "description": "Essential vaccines for healthy child development"
+      },
+      "adolescente": {
+        "title": "Teenager",
+        "subtitle": "12-19 years",
+        "description": "Protection during growth and development phase"
+      },
+      "adulto": {
+        "title": "Adult",
+        "subtitle": "20-59 years",
+        "description": "Maintaining immunity and disease prevention"
+      },
+      "gestante": {
+        "title": "Pregnant",
+        "subtitle": "All ages",
+        "description": "Special care for mother and baby during pregnancy"
+      },
+      "idoso": {
+        "title": "Senior",
+        "subtitle": "+60 years",
+        "description": "Strengthening immunity in older age"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How does it work?",
+    "subtitle": "Simple and secure process to schedule your in-person vaccination",
+    "steps": {
+      "step1": {
+        "title": "Choose the service",
+        "description": "Browse the website and choose the vaccines you or your family need"
+      },
+      "step2": {
+        "title": "Schedule your appointment",
+        "description": "Contact us to schedule on the best day and time for you"
+      },
+      "step3": {
+        "title": "Visit our clinic",
+        "description": "Come on the scheduled day and time to receive your vaccination with comfort and safety"
+      },
+      "step4": {
+        "title": "Payment method",
+        "description": "We accept Pix, Cash, Credit and Debit Cards, or Payment Link"
+      }
+    },
+    "important": "IMPORTANT:",
+    "importantText": "Appointment for",
+    "importantHighlight": "IN-PERSON",
+    "importantText2": "service at the clinic",
+    "noHomeVisits": "We do not provide home visits",
+    "ctaButton": "SCHEDULE YOUR VACCINATION"
+  },
+  "vaccines": {
+    "title": "Available Vaccines",
+    "subtitle": "Click on each category to see specific vaccines and schedule your vaccination",
+    "notFound": "Couldn't find the vaccine you're looking for? Contact us!",
+    "consultAll": "Consult All Vaccines",
+    "categories": {
+      "crianca": {
+        "title": "For Children",
+        "subtitle": "0-12 years"
+      },
+      "adolescente": {
+        "title": "For Teenagers",
+        "subtitle": "12-19 years"
+      },
+      "adulto": {
+        "title": "For Adults",
+        "subtitle": "20-59 years"
+      },
+      "gestante": {
+        "title": "For Pregnant Women",
+        "subtitle": "All ages"
+      },
+      "idoso": {
+        "title": "For Seniors",
+        "subtitle": "+60 years"
+      }
+    },
+    "scheduleButton": "Schedule Vaccination for"
+  },
+  "plan": {
+    "title": "Get a Vaccine Plan",
+    "subtitle": "Special conditions for vaccine plans",
+    "benefits": {
+      "benefit1": {
+        "title": "Ensure complete protection",
+        "description": "With our service, you can get vaccinated safely and conveniently"
+      },
+      "benefit2": {
+        "title": "Simplify scheduling",
+        "description": "With the vaccine plan, you already have all vaccines scheduled and doses reserved to be administered on the correct date"
+      }
+    },
+    "ctaButton": "CONSULT CONDITIONS",
+    "ctaText": "Contact us to learn about benefits and special conditions"
+  },
+  "space": {
+    "badge": "Get to Know Our Structure",
+    "title": "Get to Know Our",
+    "titleHighlight": "Space",
+    "subtitle": "An environment designed to offer comfort, safety, and care for you and your family",
+    "highlights": {
+      "highlight1": {
+        "title": "Humanized Care",
+        "description": "Personalized care for each patient"
+      },
+      "highlight2": {
+        "title": "Qualified Team",
+        "description": "Specialized and experienced professionals"
+      },
+      "highlight3": {
+        "title": "Family Environment",
+        "description": "Welcoming space for the whole family"
+      }
+    },
+    "ctaTitle": "Come visit us!",
+    "ctaText": "We are ready to welcome you and your family with care and professionalism.",
+    "ctaButton": "Schedule Visit",
+    "images": {
+      "fernanda": {
+        "title": "Dr. Fernanda Favali Kruger",
+        "description": "Specialized Pediatrician - CRM-SP 140.995"
+      },
+      "clinica": {
+        "title": "Our Clinic",
+        "description": "Welcoming and professional environment"
+      },
+      "atendimento": {
+        "title": "Humanized Care",
+        "description": "Care and attention in every application"
+      },
+      "entrada": {
+        "title": "Clinic Entrance",
+        "description": "Easy access and privileged location"
+      },
+      "salaEspera": {
+        "title": "Waiting Room",
+        "description": "Comfort while you wait"
+      },
+      "ambienteAconchegante": {
+        "title": "Cozy Environment",
+        "description": "Space designed for your well-being"
+      },
+      "salaVacina": {
+        "title": "Vaccination Room",
+        "description": "Modern and sanitized equipment"
+      },
+      "ambienteSeguro": {
+        "title": "Safe Environment",
+        "description": "Complete structure for your safety"
+      },
+      "tecnologia": {
+        "title": "Technology and Care",
+        "description": "State-of-the-art infrastructure for better service"
+      },
+      "armazenamento": {
+        "title": "Secure Storage",
+        "description": "Adequate refrigeration for vaccine conservation"
+      },
+      "video": {
+        "title": "Our Vaccination Room",
+        "description": "Precise and careful technique in each application"
+      }
+    }
+  },
+  "footer": {
+    "title": "Get in Touch",
+    "subtitle": "We are ready to care for your family's health with safety and professionalism.",
+    "contactInfo": {
+      "title": "Contact Information",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "instagram": "Instagram",
+      "hours": "Business Hours",
+      "hoursValue": "Mon-Fri: 9am to 6pm"
+    },
+    "location": {
+      "title": "Location",
+      "address": "Address",
+      "addressValue": "Rua Afonso de Freitas, nº 59, room 94<br />Paraíso, São Paulo - SP<br />ZIP Code 04.006-050",
+      "howToGet": "How to Get Here",
+      "metro": "Paraíso Metro Station",
+      "metroDistance": "220m from station",
+      "metroLines": "Lines 1-Blue and 2-Green",
+      "walkingTime": "Just 3 minutes walking"
+    },
+    "ourLocation": {
+      "title": "Our Location",
+      "building": "Clinic Facade",
+      "buildingName": "Upside Paraíso Building",
+      "parking": "We do not have our own parking. However, there are several parking options in front of and around the clinic that you can use.",
+      "map": "Location Map"
+    },
+    "buttons": {
+      "whatsapp": "Schedule via WhatsApp",
+      "email": "Send Email",
+      "instagram": "Follow on Instagram"
+    },
+    "company": {
+      "name": "Mil Vacinas e Pediatria",
+      "responsible": "Technical Director: Dr. Fernanda Favali Kruger - Pediatrician",
+      "cnpj": "CNPJ: 12.459.849/0001-07",
+      "crm": "CRM-SP: 140.995"
+    }
+  },
+  "logo": {
+    "tagline": "Complete protection for the whole family"
+  },
+  "whatsapp": {
+    "messages": {
+      "schedule": "Hello! I would like to schedule a vaccination for {category}. Can you help me?",
+      "plan": "Hello! I would like to know more about the Vaccine Plan and its conditions. Can you help me?",
+      "allCategories": "all categories"
+    }
+  }
+}
+

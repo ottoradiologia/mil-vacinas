@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Baby, User, Users, Heart, Stethoscope } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 const iconMap = {
   Baby,
@@ -10,6 +11,7 @@ const iconMap = {
 };
 
 const VaccineAccordion = ({ category, isOpen, onToggle, onSchedule }) => {
+  const { t } = useTranslation();
   const IconComponent = iconMap[category.icon];
   
   return (
@@ -59,7 +61,7 @@ const VaccineAccordion = ({ category, isOpen, onToggle, onSchedule }) => {
               onClick={onSchedule}
               className="btn-primary text-lg px-8 py-3"
             >
-              Agendar Vacinação para {category.title}
+              {t('vaccines.scheduleButton')} {category.title}
             </button>
           </div>
         </div>

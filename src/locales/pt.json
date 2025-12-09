@@ -1,0 +1,247 @@
+{
+  "nav": {
+    "home": "Início",
+    "ageCards": "Faixas Etárias",
+    "howItWorks": "Como Funciona",
+    "vaccines": "Vacinas",
+    "plan": "Plano Vacina",
+    "space": "Nosso Espaço",
+    "contact": "Contato",
+    "schedule": "Agendar",
+    "scheduleWhatsApp": "Agendar pelo WhatsApp",
+    "language": "Idioma"
+  },
+  "hero": {
+    "badge": "Clínica Especializada em Vacinação",
+    "title1": "Proteção",
+    "title2": "Completa para",
+    "title3": "Toda a Família",
+    "subtitle": "Agende sua vacinação com profissionais especializados no bairro do Paraíso, São Paulo.",
+    "button1": "Ver Vacinas Disponíveis",
+    "button2": "Agendar pelo WhatsApp"
+  },
+  "ageCards": {
+    "title": "Para quem você busca proteção?",
+    "subtitle": "Selecione a faixa etária para ver as vacinas específicas disponíveis",
+    "categories": {
+      "crianca": {
+        "title": "Criança",
+        "subtitle": "0-12 anos",
+        "description": "Vacinas essenciais para o desenvolvimento saudável das crianças"
+      },
+      "adolescente": {
+        "title": "Adolescente",
+        "subtitle": "12-19 anos",
+        "description": "Proteção durante a fase de crescimento e desenvolvimento"
+      },
+      "adulto": {
+        "title": "Adulto",
+        "subtitle": "20-59 anos",
+        "description": "Manutenção da imunidade e prevenção de doenças"
+      },
+      "gestante": {
+        "title": "Gestante",
+        "subtitle": "Todas as idades",
+        "description": "Cuidados especiais para mãe e bebê durante a gravidez"
+      },
+      "idoso": {
+        "title": "Idoso",
+        "subtitle": "+60 anos",
+        "description": "Fortalecimento da imunidade na terceira idade"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Como funciona?",
+    "subtitle": "Processo simples e seguro para agendar sua vacinação presencial",
+    "steps": {
+      "step1": {
+        "title": "Escolha o serviço",
+        "description": "Navegue pelo site e escolha as vacinas que você ou sua família precisam"
+      },
+      "step2": {
+        "title": "Agende seu horário",
+        "description": "Entre em contato para agendar no melhor dia e horário para você"
+      },
+      "step3": {
+        "title": "Venha até nossa clínica",
+        "description": "Compareça no dia e hora agendados para realizar sua vacinação com conforto e segurança"
+      },
+      "step4": {
+        "title": "Forma de pagamento",
+        "description": "Aceitamos Pix, Dinheiro, Cartão de Crédito e Débito ou Link de Pagamento"
+      }
+    },
+    "important": "IMPORTANTE:",
+    "importantText": "Agendamento para atendimento",
+    "importantHighlight": "PRESENCIAL",
+    "importantText2": "na clínica",
+    "noHomeVisits": "Não realizamos visitas domiciliares",
+    "ctaButton": "AGENDAR SUA VACINAÇÃO"
+  },
+  "vaccines": {
+    "title": "Vacinas Disponíveis",
+    "subtitle": "Clique em cada categoria para ver as vacinas específicas e agendar sua vacinação",
+    "notFound": "Não encontrou a vacina que procura? Entre em contato conosco!",
+    "consultAll": "Consultar Todas as Vacinas",
+    "categories": {
+      "crianca": {
+        "title": "Para Crianças",
+        "subtitle": "0-12 anos"
+      },
+      "adolescente": {
+        "title": "Para Adolescentes",
+        "subtitle": "12-19 anos"
+      },
+      "adulto": {
+        "title": "Para Adultos",
+        "subtitle": "20-59 anos"
+      },
+      "gestante": {
+        "title": "Para Gestantes",
+        "subtitle": "Todas as idades"
+      },
+      "idoso": {
+        "title": "Para Idosos",
+        "subtitle": "+60 anos"
+      }
+    },
+    "scheduleButton": "Agendar Vacinação para"
+  },
+  "plan": {
+    "title": "Faça um Plano Vacinal",
+    "subtitle": "Condições especiais para plano vacinal",
+    "benefits": {
+      "benefit1": {
+        "title": "Garanta toda proteção necessária",
+        "description": "Com nosso serviço, você pode se vacinar com segurança e conveniência"
+      },
+      "benefit2": {
+        "title": "Facilite o agendamento",
+        "description": "Com o plano vacina você já deixa todas as vacinas agendadas e as doses ficam reservadas para serem realizadas na data correta"
+      }
+    },
+    "ctaButton": "CONSULTAR CONDIÇÕES",
+    "ctaText": "Entre em contato para conhecer os benefícios e condições especiais"
+  },
+  "space": {
+    "badge": "Conheça Nossa Estrutura",
+    "title": "Conheça Nosso",
+    "titleHighlight": "Espaço",
+    "subtitle": "Um ambiente pensado para oferecer conforto, segurança e acolhimento para você e sua família",
+    "highlights": {
+      "highlight1": {
+        "title": "Atendimento Humanizado",
+        "description": "Cuidado personalizado para cada paciente"
+      },
+      "highlight2": {
+        "title": "Equipe Qualificada",
+        "description": "Profissionais especializados e experientes"
+      },
+      "highlight3": {
+        "title": "Ambiente Familiar",
+        "description": "Espaço acolhedor para toda a família"
+      }
+    },
+    "ctaTitle": "Venha nos visitar!",
+    "ctaText": "Estamos prontos para receber você e sua família com todo carinho e profissionalismo.",
+    "ctaButton": "Agendar Visita",
+    "images": {
+      "fernanda": {
+        "title": "Dra. Fernanda Favali Kruger",
+        "description": "Pediatra especializada - CRM-SP 140.995"
+      },
+      "clinica": {
+        "title": "Nossa Clínica",
+        "description": "Ambiente acolhedor e profissional"
+      },
+      "atendimento": {
+        "title": "Atendimento Humanizado",
+        "description": "Cuidado e atenção em cada aplicação"
+      },
+      "entrada": {
+        "title": "Entrada da Clínica",
+        "description": "Fácil acesso e localização privilegiada"
+      },
+      "salaEspera": {
+        "title": "Sala de Espera",
+        "description": "Conforto enquanto você aguarda"
+      },
+      "ambienteAconchegante": {
+        "title": "Ambiente Aconchegante",
+        "description": "Espaço pensado para seu bem-estar"
+      },
+      "salaVacina": {
+        "title": "Sala de Vacinação",
+        "description": "Equipamentos modernos e higienizados"
+      },
+      "ambienteSeguro": {
+        "title": "Ambiente Seguro",
+        "description": "Estrutura completa para sua segurança"
+      },
+      "tecnologia": {
+        "title": "Tecnologia e Cuidado",
+        "description": "Infraestrutura de ponta para melhor atendimento"
+      },
+      "armazenamento": {
+        "title": "Armazenamento Seguro",
+        "description": "Refrigeração adequada para conservação das vacinas"
+      },
+      "video": {
+        "title": "Nossa Sala de Vacinação",
+        "description": "Técnica precisa e cuidadosa em cada aplicação"
+      }
+    }
+  },
+  "footer": {
+    "title": "Entre em Contato",
+    "subtitle": "Estamos prontos para cuidar da saúde da sua família com segurança e profissionalismo.",
+    "contactInfo": {
+      "title": "Informações de Contato",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "instagram": "Instagram",
+      "hours": "Horário de Funcionamento",
+      "hoursValue": "Seg-Sex: 9h às 18h"
+    },
+    "location": {
+      "title": "Localização",
+      "address": "Endereço",
+      "addressValue": "Rua Afonso de Freitas, nº 59, sala 94<br />Paraíso, São Paulo - SP<br />CEP 04.006-050",
+      "howToGet": "Como Chegar",
+      "metro": "Metrô Paraíso",
+      "metroDistance": "220m da estação",
+      "metroLines": "Linhas 1-Azul e 2-Verde",
+      "walkingTime": "Apenas 3 minutos caminhando"
+    },
+    "ourLocation": {
+      "title": "Nossa Localização",
+      "building": "Fachada da Clínica",
+      "buildingName": "Edifício Upside Paraíso",
+      "parking": "Não possuímos estacionamento próprio. No entanto, há diversas opções de estacionamentos em frente e ao redor da clínica que você pode utilizar.",
+      "map": "Mapa de Localização"
+    },
+    "buttons": {
+      "whatsapp": "Agendar pelo WhatsApp",
+      "email": "Enviar Email",
+      "instagram": "Seguir no Instagram"
+    },
+    "company": {
+      "name": "Mil Vacinas e Pediatria",
+      "responsible": "Responsável Técnica: Dra. Fernanda Favali Kruger - Pediatra",
+      "cnpj": "CNPJ: 12.459.849/0001-07",
+      "crm": "CRM-SP: 140.995"
+    }
+  },
+  "logo": {
+    "tagline": "Proteção completa para toda a família"
+  },
+  "whatsapp": {
+    "messages": {
+      "schedule": "Olá! Gostaria de agendar uma vacinação para {category}. Podem me ajudar?",
+      "plan": "Olá! Gostaria de saber mais sobre o Plano Vacina e suas condições. Podem me ajudar?",
+      "allCategories": "todas as categorias"
+    }
+  }
+}
+

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Logo from './Logo';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t, language, changeLanguage } = useTranslation();
 
   // Detectar scroll para mudar o estilo da navbar
   useEffect(() => {
@@ -25,13 +27,13 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { id: 'home', label: 'Início' },
-    { id: 'age-cards', label: 'Faixas Etárias' },
-    { id: 'how-it-works', label: 'Como Funciona' },
-    { id: 'vaccines-section', label: 'Vacinas' },
-    { id: 'plan-section', label: 'Plano Vacina' },
-    { id: 'space-section', label: 'Nosso Espaço' },
-    { id: 'contact', label: 'Contato' }
+    { id: 'home', key: 'nav.home' },
+    { id: 'age-cards', key: 'nav.ageCards' },
+    { id: 'how-it-works', key: 'nav.howItWorks' },
+    { id: 'vaccines-section', key: 'nav.vaccines' },
+    { id: 'plan-section', key: 'nav.plan' },
+    { id: 'space-section', key: 'nav.space' },
+    { id: 'contact', key: 'nav.contact' }
   ];
 
   return (
@@ -48,23 +50,35 @@ const Navbar = () => {
           </div>
 
           {/* Menu Desktop */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             {menuItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="font-semibold text-text transition-colors duration-300 hover:text-primary hover:underline underline-offset-4"
+                className="font-semibold text-text normal-case transition-colors duration-300 hover:text-primary hover:underline underline-offset-4"
               >
-                {item.label}
+                {t(item.key)}
               </button>
             ))}
+            
+            {/* Language Selector */}
+            <div className="flex items-center gap-2 ml-4 border-l border-gray-300 pl-4">
+              <Globe size={18} className="text-textSecondary" />
+              <button
+                onClick={() => changeLanguage(language === 'pt' ? 'en' : 'pt')}
+                className="font-semibold text-text hover:text-primary transition-colors duration-300 px-2 py-1 rounded"
+                aria-label="Change language"
+              >
+                {language === 'pt' ? 'PT' : 'EN'}
+              </button>
+            </div>
             
             {/* CTA Button */}
             <button
               onClick={() => window.open('https://wa.me/5511973139542', '_blank')}
               className="btn-primary text-sm px-4 py-2"
             >
-              Agendar
+              {t('nav.schedule')}
             </button>
           </div>
 
@@ -86,18 +100,34 @@ const Navbar = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left text-text font-semibold hover:text-primary hover:bg-primary/5 transition-all py-3 px-2 rounded-lg"
+                  className="block w-full text-left text-text font-semibold normal-case hover:text-primary hover:bg-primary/5 transition-all py-3 px-2 rounded-lg"
                 >
-                  {item.label}
+                  {t(item.key)}
                 </button>
               ))}
               
+              {/* Language Selector Mobile */}
               <div className="pt-4 border-t border-gray-200">
+                <div className="flex items-center justify-between px-2 py-2">
+                  <div className="flex items-center gap-2">
+                    <Globe size={18} className="text-textSecondary" />
+                    <span className="text-text font-medium">{t('nav.language') || 'Idioma'}</span>
+                  </div>
+                  <button
+                    onClick={() => changeLanguage(language === 'pt' ? 'en' : 'pt')}
+                    className="font-semibold text-primary hover:underline"
+                  >
+                    {language === 'pt' ? 'EN' : 'PT'}
+                  </button>
+                </div>
+              </div>
+              
+              <div className="pt-2 border-t border-gray-200">
                 <button
                   onClick={() => window.open('https://wa.me/5511973139542', '_blank')}
                   className="w-full btn-primary text-center"
                 >
-                  Agendar pelo WhatsApp
+                  {t('nav.scheduleWhatsApp')}
                 </button>
               </div>
             </div>

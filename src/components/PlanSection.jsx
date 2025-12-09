@@ -3,23 +3,26 @@ import Section from './Section';
 import Card from './Card';
 import Button from './Button';
 import { Shield, CalendarCheck } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 const PlanSection = () => {
+  const { t } = useTranslation();
+  
   const planBenefits = [
     {
       icon: Shield,
-      title: 'Garanta toda proteção necessária',
-      description: 'Com nosso serviço, você pode se vacinar com segurança e conveniência'
+      title: t('plan.benefits.benefit1.title'),
+      description: t('plan.benefits.benefit1.description')
     },
     {
       icon: CalendarCheck,
-      title: 'Facilite o agendamento',
-      description: 'Com o plano vacina você já deixa todas as vacinas agendadas e as doses ficam reservadas para serem realizadas na data correta'
+      title: t('plan.benefits.benefit2.title'),
+      description: t('plan.benefits.benefit2.description')
     }
   ];
 
   const handleConsultConditions = () => {
-    const message = 'Olá! Gostaria de saber mais sobre o Plano Vacina e suas condições. Podem me ajudar?';
+    const message = t('whatsapp.messages.plan');
     const whatsappUrl = `https://wa.me/5511973139542?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -28,10 +31,10 @@ const PlanSection = () => {
     <Section backgroundColor="primary" className="text-white">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">
-          Faça um Plano Vacinal
+          {t('plan.title')}
         </h2>
         <p className="text-xl opacity-90 max-w-2xl mx-auto">
-          Condições especiais para plano vacinal
+          {t('plan.subtitle')}
         </p>
       </div>
 
@@ -70,11 +73,11 @@ const PlanSection = () => {
           onClick={handleConsultConditions}
           className="text-lg bg-secondary text-primary hover:bg-secondary/90"
         >
-          CONSULTAR CONDIÇÕES
+          {t('plan.ctaButton')}
         </Button>
         
         <p className="text-sm opacity-80 mt-4">
-          Entre em contato para conhecer os benefícios e condições especiais
+          {t('plan.ctaText')}
         </p>
       </div>
     </Section>

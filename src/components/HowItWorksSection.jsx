@@ -3,28 +3,31 @@ import Section from './Section';
 import Card from './Card';
 import Button from './Button';
 import { MapPin, Calendar, Building2, CreditCard } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 const HowItWorksSection = () => {
+  const { t } = useTranslation();
+  
   const steps = [
     {
       icon: MapPin,
-      title: 'Escolha o serviço',
-      description: 'Navegue pelo site e escolha as vacinas que você ou sua família precisam'
+      title: t('howItWorks.steps.step1.title'),
+      description: t('howItWorks.steps.step1.description')
     },
     {
       icon: Calendar,
-      title: 'Agende seu horário',
-      description: 'Entre em contato para agendar no melhor dia e horário para você'
+      title: t('howItWorks.steps.step2.title'),
+      description: t('howItWorks.steps.step2.description')
     },
     {
       icon: Building2,
-      title: 'Venha até nossa clínica',
-      description: 'Compareça no dia e hora agendados para realizar sua vacinação com conforto e segurança'
+      title: t('howItWorks.steps.step3.title'),
+      description: t('howItWorks.steps.step3.description')
     },
     {
       icon: CreditCard,
-      title: 'Forma de pagamento',
-      description: 'Aceitamos Pix, Dinheiro, Cartão de Crédito e Débito ou Link de Pagamento'
+      title: t('howItWorks.steps.step4.title'),
+      description: t('howItWorks.steps.step4.description')
     }
   ];
 
@@ -36,10 +39,10 @@ const HowItWorksSection = () => {
     <Section backgroundColor="accent" className="text-white">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">
-          Como funciona?
+          {t('howItWorks.title')}
         </h2>
         <p className="text-xl opacity-90 max-w-2xl mx-auto">
-          Processo simples e seguro para agendar sua vacinação presencial
+          {t('howItWorks.subtitle')}
         </p>
       </div>
 
@@ -78,11 +81,8 @@ const HowItWorksSection = () => {
       {/* CTA Principal */}
       <div className="text-center">
         <div className="mb-6 bg-white/95 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto border-2 border-white shadow-xl">
-          <p className="text-xl font-bold text-text mb-3">
-            <span className="text-accent">IMPORTANTE:</span> Agendamento para atendimento <span className="text-accent">PRESENCIAL</span> na clínica
-          </p>
-          <p className="text-lg font-semibold text-text">
-            Não realizamos visitas domiciliares
+          <p className="text-xl font-bold text-text">
+            <span className="text-accent">{t('howItWorks.important')}</span> {t('howItWorks.importantText')} <span className="text-accent">{t('howItWorks.importantHighlight')}</span> {t('howItWorks.importantText2')}
           </p>
         </div>
         
@@ -92,7 +92,7 @@ const HowItWorksSection = () => {
           onClick={handleScheduleClick}
           className="text-lg bg-white text-accent hover:bg-white/90"
         >
-          AGENDAR SUA VACINAÇÃO
+          {t('howItWorks.ctaButton')}
         </Button>
       </div>
     </Section>

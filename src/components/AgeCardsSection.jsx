@@ -2,50 +2,43 @@ import React from 'react';
 import Section from './Section';
 import Card from './Card';
 import { Baby, User, Users, Heart, Stethoscope } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 const AgeCardsSection = () => {
+  const { t } = useTranslation();
+  
   const ageCategories = [
     {
       id: 'crianca',
-      title: 'Criança',
-      subtitle: '0-12 anos',
       icon: Baby,
-      image: '/assets/images/crianca.png',
-      description: 'Vacinas essenciais para o desenvolvimento saudável das crianças'
+      image: '/assets/images/crianca.png'
     },
     {
       id: 'adolescente',
-      title: 'Adolescente',
-      subtitle: '12-19 anos',
       icon: User,
-      image: '/assets/images/adolescente.png',
-      description: 'Proteção durante a fase de crescimento e desenvolvimento'
+      image: '/assets/images/adolescente.png'
     },
     {
       id: 'adulto',
-      title: 'Adulto',
-      subtitle: '20-59 anos',
       icon: Users,
-      image: '/assets/images/adulto.png',
-      description: 'Manutenção da imunidade e prevenção de doenças'
+      image: '/assets/images/adulto.png'
     },
     {
       id: 'gestante',
-      title: 'Gestante',
-      subtitle: 'Todas as idades',
       icon: Heart,
-      image: '/assets/images/gravida.png',
-      description: 'Cuidados especiais para mãe e bebê durante a gravidez'
+      image: '/assets/images/gravida.png'
     },
     {
       id: 'idoso',
-      title: 'Idoso',
-      subtitle: '+60 anos',
       icon: Stethoscope,
-      image: '/assets/images/idoso.png',
-      description: 'Fortalecimento da imunidade na terceira idade'
+      image: '/assets/images/idoso.png'
     }
-  ];
+  ].map(cat => ({
+    ...cat,
+    title: t(`ageCards.categories.${cat.id}.title`),
+    subtitle: t(`ageCards.categories.${cat.id}.subtitle`),
+    description: t(`ageCards.categories.${cat.id}.description`)
+  }));
 
   const scrollToVaccines = (categoryId) => {
     const vaccinesSection = document.getElementById('vaccines-section');
@@ -66,10 +59,10 @@ const AgeCardsSection = () => {
     <Section backgroundColor="primary" className="text-white">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">
-          Para quem você busca proteção?
+          {t('ageCards.title')}
         </h2>
         <p className="text-xl opacity-90 max-w-2xl mx-auto">
-          Selecione a faixa etária para ver as vacinas específicas disponíveis
+          {t('ageCards.subtitle')}
         </p>
       </div>
 

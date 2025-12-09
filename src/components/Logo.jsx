@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTranslation } from '../hooks/useTranslation';
 
 const Logo = ({ className = "", showText = true, size = "medium", imageSrc = null }) => {
+  const { t } = useTranslation();
   const sizeClasses = {
     small: "h-8 w-auto",
     medium: "h-12 w-auto", 
@@ -33,7 +35,7 @@ const Logo = ({ className = "", showText = true, size = "medium", imageSrc = nul
             Mil Vacinas
           </h1>
           <p className="text-sm text-textSecondary font-medium">
-            Proteção completa para toda a família
+            {t('logo.tagline')}
           </p>
         </div>
       )}
