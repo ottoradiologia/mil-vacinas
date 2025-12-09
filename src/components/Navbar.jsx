@@ -50,33 +50,33 @@ const Navbar = () => {
           </div>
 
           {/* Menu Desktop */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center gap-1">
             {menuItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="font-semibold text-text normal-case transition-colors duration-300 hover:text-primary hover:underline underline-offset-4"
+                className="px-4 py-2 text-sm font-medium text-text normal-case rounded-lg transition-all duration-200 hover:text-primary hover:bg-primary/5"
               >
                 {t(item.key)}
               </button>
             ))}
             
             {/* Language Selector */}
-            <div className="flex items-center gap-2 ml-4 border-l border-gray-300 pl-4">
-              <Globe size={18} className="text-textSecondary" />
+            <div className="flex items-center gap-2 ml-2 border-l border-gray-200 pl-4">
               <button
                 onClick={() => changeLanguage(language === 'pt' ? 'en' : 'pt')}
-                className="font-semibold text-text hover:text-primary transition-colors duration-300 px-2 py-1 rounded"
+                className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-textSecondary hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-200"
                 aria-label="Change language"
               >
-                {language === 'pt' ? 'PT' : 'EN'}
+                <Globe size={16} />
+                <span>{language === 'pt' ? 'PT' : 'EN'}</span>
               </button>
             </div>
             
             {/* CTA Button */}
             <button
               onClick={() => window.open('https://wa.me/5511973139542', '_blank')}
-              className="btn-primary text-sm px-4 py-2"
+              className="ml-2 btn-primary text-sm px-5 py-2"
             >
               {t('nav.schedule')}
             </button>
@@ -95,37 +95,37 @@ const Navbar = () => {
         {/* Menu Mobile */}
         {isMenuOpen && (
           <div className="md:hidden bg-white shadow-lg border-t border-gray-200">
-            <div className="px-4 py-6 space-y-4">
+            <div className="px-4 py-6 space-y-2">
               {menuItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left text-text font-semibold normal-case hover:text-primary hover:bg-primary/5 transition-all py-3 px-2 rounded-lg"
+                  className="block w-full text-left text-base font-medium text-text normal-case hover:text-primary hover:bg-primary/5 transition-all py-3 px-4 rounded-lg"
                 >
                   {t(item.key)}
                 </button>
               ))}
               
               {/* Language Selector Mobile */}
-              <div className="pt-4 border-t border-gray-200">
-                <div className="flex items-center justify-between px-2 py-2">
+              <div className="pt-4 border-t border-gray-200 mt-4">
+                <div className="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg">
                   <div className="flex items-center gap-2">
                     <Globe size={18} className="text-textSecondary" />
-                    <span className="text-text font-medium">{t('nav.language') || 'Idioma'}</span>
+                    <span className="text-sm font-medium text-text">{t('nav.language') || 'Idioma'}</span>
                   </div>
                   <button
                     onClick={() => changeLanguage(language === 'pt' ? 'en' : 'pt')}
-                    className="font-semibold text-primary hover:underline"
+                    className="px-4 py-1.5 text-sm font-semibold text-primary bg-white rounded-lg border border-primary/20 hover:bg-primary/5 transition-all"
                   >
                     {language === 'pt' ? 'EN' : 'PT'}
                   </button>
                 </div>
               </div>
               
-              <div className="pt-2 border-t border-gray-200">
+              <div className="pt-2 border-t border-gray-200 mt-4">
                 <button
                   onClick={() => window.open('https://wa.me/5511973139542', '_blank')}
-                  className="w-full btn-primary text-center"
+                  className="w-full btn-primary text-center py-3"
                 >
                   {t('nav.scheduleWhatsApp')}
                 </button>
