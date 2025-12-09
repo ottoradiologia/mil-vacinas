@@ -1,7 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import Logo from './Logo';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
+
+const FlagBR = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 16" className={className}>
+    <rect width="22" height="16" fill="#009c3b"/>
+    <path d="M11 2.5L19.5 8L11 13.5L2.5 8L11 2.5Z" fill="#ffdf00"/>
+    <circle cx="11" cy="8" r="3.5" fill="#002776"/>
+    <path d="M8.5 8.5C8.5 8.5 9.5 9.5 11 9.5C12.5 9.5 13.5 8.5 13.5 8.5" stroke="white" strokeWidth="0.5" fill="none"/>
+  </svg>
+);
+
+const FlagUS = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 16" className={className}>
+    <rect width="22" height="16" fill="#bf0a30"/>
+    <path d="M0 2.6H22M0 5.3H22M0 8H22M0 10.6H22M0 13.3H22" stroke="white" strokeWidth="1.3"/>
+    <rect width="10" height="9" fill="#002868"/>
+    <circle cx="2.5" cy="2.5" r="0.8" fill="white"/>
+    <circle cx="5" cy="2.5" r="0.8" fill="white"/>
+    <circle cx="7.5" cy="2.5" r="0.8" fill="white"/>
+    <circle cx="2.5" cy="5" r="0.8" fill="white"/>
+    <circle cx="5" cy="5" r="0.8" fill="white"/>
+    <circle cx="7.5" cy="5" r="0.8" fill="white"/>
+    <circle cx="2.5" cy="7.5" r="0.8" fill="white"/>
+    <circle cx="5" cy="7.5" r="0.8" fill="white"/>
+    <circle cx="7.5" cy="7.5" r="0.8" fill="white"/>
+  </svg>
+);
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,12 +90,20 @@ const Navbar = () => {
             {/* Language Selector */}
             <div className="flex items-center gap-2 ml-2 border-l border-gray-200 pl-4">
               <button
-                onClick={() => changeLanguage(language === 'pt' ? 'en' : 'pt')}
-                className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-textSecondary hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-200"
-                aria-label="Change language"
+                onClick={() => changeLanguage('pt')}
+                className={`p-1.5 rounded-lg transition-all duration-200 ${language === 'pt' ? 'bg-primary/10 ring-2 ring-primary/20 scale-110' : 'opacity-60 hover:opacity-100 hover:bg-gray-100'}`}
+                aria-label="Mudar para Português"
+                title="Português"
               >
-                <Globe size={16} />
-                <span>{language === 'pt' ? 'PT' : 'EN'}</span>
+                <FlagBR className="w-6 h-auto shadow-sm rounded-sm" />
+              </button>
+              <button
+                onClick={() => changeLanguage('en')}
+                className={`p-1.5 rounded-lg transition-all duration-200 ${language === 'en' ? 'bg-primary/10 ring-2 ring-primary/20 scale-110' : 'opacity-60 hover:opacity-100 hover:bg-gray-100'}`}
+                aria-label="Switch to English"
+                title="English"
+              >
+                <FlagUS className="w-6 h-auto shadow-sm rounded-sm" />
               </button>
             </div>
             
@@ -85,13 +119,22 @@ const Navbar = () => {
           {/* Mobile Actions & Menu Button */}
           <div className="flex md:hidden items-center gap-2">
             {/* Language Selector Mobile Header */}
-            <button
-              onClick={() => changeLanguage(language === 'pt' ? 'en' : 'pt')}
-              className="px-2 py-1.5 text-xs font-bold text-textSecondary bg-gray-50 border border-gray-200 rounded-lg hover:text-primary transition-all"
-              aria-label="Change language"
-            >
-              {language === 'pt' ? 'PT' : 'EN'}
-            </button>
+            <div className="flex items-center gap-1.5 mr-1">
+              <button
+                onClick={() => changeLanguage('pt')}
+                className={`p-1 rounded-md transition-all ${language === 'pt' ? 'bg-primary/10 ring-1 ring-primary/20' : 'opacity-60'}`}
+                aria-label="Português"
+              >
+                <FlagBR className="w-5 h-auto rounded-sm" />
+              </button>
+              <button
+                onClick={() => changeLanguage('en')}
+                className={`p-1 rounded-md transition-all ${language === 'en' ? 'bg-primary/10 ring-1 ring-primary/20' : 'opacity-60'}`}
+                aria-label="English"
+              >
+                <FlagUS className="w-5 h-auto rounded-sm" />
+              </button>
+            </div>
 
             {/* CTA Button Mobile Header */}
             <button
@@ -126,21 +169,7 @@ const Navbar = () => {
                 </button>
               ))}
               
-              {/* Language Selector Mobile */}
-              <div className="pt-4 border-t border-gray-200 mt-4">
-                <div className="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg">
-                  <div className="flex items-center gap-2">
-                    <Globe size={18} className="text-textSecondary" />
-                    <span className="text-sm font-medium text-text">{t('nav.language') || 'Idioma'}</span>
-                  </div>
-                  <button
-                    onClick={() => changeLanguage(language === 'pt' ? 'en' : 'pt')}
-                    className="px-4 py-1.5 text-sm font-semibold text-primary bg-white rounded-lg border border-primary/20 hover:bg-primary/5 transition-all"
-                  >
-                    {language === 'pt' ? 'EN' : 'PT'}
-                  </button>
-                </div>
-              </div>
+              {/* Language Selector Mobile - Removido pois já está no header */}
               
               <div className="pt-2 border-t border-gray-200 mt-4">
                 <button
