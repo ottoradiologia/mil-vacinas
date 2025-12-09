@@ -7,6 +7,7 @@ import AgeCardsSection from './components/AgeCardsSection';
 import HowItWorksSection from './components/HowItWorksSection';
 import VaccinesSection from './components/VaccinesSection';
 import PlanSection from './components/PlanSection';
+import CompaniesSection from './components/CompaniesSection';
 import SpaceSection from './components/SpaceSection';
 import Footer from './components/Footer';
 
@@ -39,6 +40,9 @@ function App() {
       <div id="plan-section">
         <PlanSection />
       </div>
+
+      {/* Companies Section */}
+      <CompaniesSection />
       
       {/* Space Section - Conheça Nosso Espaço */}
       <div id="space-section">

@@ -220,6 +220,13 @@
       }
     }
   },
+  "companies": {
+    "title": "Vaccination for Companies",
+    "subtitle": "In-Company Vaccination Programs and Campaigns",
+    "description": "Bring health and protection to your team. We conduct vaccination campaigns directly at your company with the same quality and safety as our clinic.",
+    "badge": "Upon Request",
+    "ctaButton": "Request Quote"
+  },
   "footer": {
     "title": "Get in Touch",
     "subtitle": "We are ready to care for your family's health with safety and professionalism.",

@@ -220,6 +220,13 @@
       }
     }
   },
+  "companies": {
+    "title": "Vacinação para Empresas",
+    "subtitle": "Programas e Campanhas de Vacinação In Company",
+    "description": "Leve saúde e proteção para sua equipe. Realizamos campanhas de vacinação diretamente em sua empresa com a mesma qualidade e segurança de nossa clínica.",
+    "badge": "Sob Consulta",
+    "ctaButton": "Solicitar Orçamento"
+  },
   "footer": {
     "title": "Entre em Contato",
     "subtitle": "Estamos prontos para cuidar da saúde da sua família com segurança e profissionalismo.",
