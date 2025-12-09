@@ -82,14 +82,34 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Menu Mobile Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg transition-colors text-text hover:bg-primary/10"
-            aria-label="Abrir menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Actions & Menu Button */}
+          <div className="flex md:hidden items-center gap-2">
+            {/* Language Selector Mobile Header */}
+            <button
+              onClick={() => changeLanguage(language === 'pt' ? 'en' : 'pt')}
+              className="px-2 py-1.5 text-xs font-bold text-textSecondary bg-gray-50 border border-gray-200 rounded-lg hover:text-primary transition-all"
+              aria-label="Change language"
+            >
+              {language === 'pt' ? 'PT' : 'EN'}
+            </button>
+
+            {/* CTA Button Mobile Header */}
+            <button
+              onClick={() => window.open('https://wa.me/5511973139542', '_blank')}
+              className="btn-primary text-xs px-3 py-2 whitespace-nowrap"
+            >
+              {t('nav.schedule')}
+            </button>
+
+            {/* Menu Toggle */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-1.5 rounded-lg transition-colors text-text hover:bg-primary/10 ml-1"
+              aria-label="Abrir menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Menu Mobile */}

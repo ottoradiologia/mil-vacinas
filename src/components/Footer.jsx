@@ -145,12 +145,6 @@ const Footer = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
               {/* Foto da fachada do prédio */}
               <div className="rounded-xl shadow-lg bg-white overflow-hidden h-full flex flex-col">
-                <div className="p-5 border-b border-gray-100">
-                  <h4 className="font-bold text-text text-center text-lg">
-                    {t('footer.ourLocation.building')}
-                  </h4>
-                </div>
-                
                 <div className="flex-1 bg-gray-50 p-4 flex items-center justify-center">
                   <img 
                     src="/assets/images/fotopredio.png" 

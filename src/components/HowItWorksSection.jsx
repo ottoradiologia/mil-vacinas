@@ -80,11 +80,6 @@ const HowItWorksSection = () => {
 
       {/* CTA Principal */}
       <div className="text-center">
-        <div className="mb-6 bg-white/95 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto border-2 border-white shadow-xl">
-          <p className="text-xl font-bold text-text">
-            <span className="text-accent">{t('howItWorks.important')}</span> {t('howItWorks.importantText')} <span className="text-accent">{t('howItWorks.importantHighlight')}</span> {t('howItWorks.importantText2')}
-          </p>
-        </div>
         
         <Button
           size="lg"
