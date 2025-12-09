@@ -50,7 +50,7 @@ const VaccineAccordion = ({ category, isOpen, onToggle, onSchedule }) => {
                 className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm"
               >
                 <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                <span className="text-text font-medium">{vaccine}</span>
+                <span className="text-text font-medium">{t(`vaccines.items.${vaccine}`)}</span>
               </div>
             ))}
           </div>

@@ -106,7 +106,34 @@
         "subtitle": "+60 anos"
       }
     },
-    "scheduleButton": "Agendar Vacinação para"
+    "scheduleButton": "Agendar Vacinação para",
+    "items": {
+      "hexavalente_acelular": "Vacina Hexavalente Acelular",
+      "pneumococica_13": "Vacina Pneumocócica 13",
+      "pneumococica_15": "Vacina Pneumocócica 15",
+      "rotavirus_pentavalente": "Vacina Rotavírus Pentavalente",
+      "meningococica_acwy": "Vacina Meningocócica ACWY",
+      "meningococica_b": "Vacina Meningocócica B",
+      "influenza_quadrivalente": "Vacina Influenza Quadrivalente",
+      "febre_amarela": "Vacina Febre Amarela",
+      "hepatite_a": "Vacina Hepatite A",
+      "triplice_viral": "Vacina Tríplice Viral",
+      "varicela_catapora": "Vacina Varicela (Catapora)",
+      "tetra_viral": "Vacina Tetra Viral",
+      "pentavalente_acelular": "Vacina Pentavalente Acelular",
+      "dtpa_vip": "Vacina Tríplice Bacteriana DTPA-VIP",
+      "dengue": "Vacina Dengue",
+      "hpv_nonavalente": "Vacina HPV Nonavalente",
+      "pneumococica_20": "Vacina Pneumocócica 20",
+      "beyfortus": "Beyfortus (nirsevimabe)",
+      "hepatite_ab": "Vacina Hepatite A+B",
+      "dtpa": "Vacina Tríplice Bacteriana Dtpa",
+      "varicela": "Vacina Varicela",
+      "hepatite_b": "Vacina Hepatite B",
+      "vsr": "Vacina VSR (Vírus Sincicial Respiratório)",
+      "influenza_quadrivalente_60": "Vacina Influenza Quadrivalente 60+",
+      "herpes_zoster": "Vacina Herpes Zoster"
+    }
   },
   "plan": {
     "title": "Faça um Plano Vacinal",

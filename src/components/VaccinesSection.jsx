@@ -24,7 +24,7 @@ const VaccinesSection = () => {
       ...vaccinesData[categoryId],
       title: t(`vaccines.categories.${categoryId}.title`),
       subtitle: t(`vaccines.categories.${categoryId}.subtitle`),
-      vaccines: vaccinesData[categoryId].vaccines // Manter nomes técnicos das vacinas
+      vaccines: vaccinesData[categoryId].vaccines // Array de IDs de vacinas
     };
     return acc;
   }, {});

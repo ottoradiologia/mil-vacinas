@@ -4,24 +4,24 @@ export const vaccinesData = {
     subtitle: '0-12 anos',
     icon: 'Baby',
     vaccines: [
-      'Vacina Hexavalente Acelular',
-      'Vacina Pneumocócica 13',
-      'Vacina Pneumocócica 15',
-      'Vacina Rotavírus Pentavalente',
-      'Vacina Meningocócica ACWY',
-      'Vacina Meningocócica B',
-      'Vacina Influenza Quadrivalente',
-      'Vacina Febre Amarela',
-      'Vacina Hepatite A',
-      'Vacina Tríplice Viral',
-      'Vacina Varicela (Catapora)',
-      'Vacina Tetra Viral',
-      'Vacina Pentavalente Acelular',
-      'Vacina Tríplice Bacteriana DTPA-VIP',
-      'Vacina Dengue',
-      'Vacina HPV Nona Valente',
-      'Vacina Pneumocócica 20',
-      'Beyfortus (nirsevimabe)'
+      'hexavalente_acelular',
+      'pneumococica_13',
+      'pneumococica_15',
+      'rotavirus_pentavalente',
+      'meningococica_acwy',
+      'meningococica_b',
+      'influenza_quadrivalente',
+      'febre_amarela',
+      'hepatite_a',
+      'triplice_viral',
+      'varicela_catapora',
+      'tetra_viral',
+      'pentavalente_acelular',
+      'dtpa_vip',
+      'dengue',
+      'hpv_nonavalente',
+      'pneumococica_20',
+      'beyfortus'
     ]
   },
   adolescente: {
@@ -29,18 +29,18 @@ export const vaccinesData = {
     subtitle: '12-19 anos',
     icon: 'User',
     vaccines: [
-      'Vacina HPV Nonavalente',
-      'Vacina Tríplice Bacteriana DTPA-VIP',
-      'Vacina Meningocócica B',
-      'Vacina Meningocócica ACWY',
-      'Vacina Febre Amarela',
-      'Vacina Dengue',
-      'Vacina Hepatite A',
-      'Vacina Hepatite A+B',
-      'Vacina Influenza Quadrivalente',
-      'Vacina Pneumocócica 20',
-      'Vacina Pneumocócica 13',
-      'Vacina Pneumocócica 15'
+      'hpv_nonavalente',
+      'dtpa_vip',
+      'meningococica_b',
+      'meningococica_acwy',
+      'febre_amarela',
+      'dengue',
+      'hepatite_a',
+      'hepatite_ab',
+      'influenza_quadrivalente',
+      'pneumococica_20',
+      'pneumococica_13',
+      'pneumococica_15'
     ]
   },
   adulto: {
@@ -48,19 +48,19 @@ export const vaccinesData = {
     subtitle: '20-59 anos',
     icon: 'Users',
     vaccines: [
-      'Vacina Hepatite A+B',
-      'Vacina Tríplice Bacteriana Dtpa',
-      'Vacina Tríplice Viral',
-      'Vacina Varicela',
-      'Vacina Febre Amarela',
-      'Vacina Pneumocócica 13',
-      'Vacina Pneumocócica 15',
-      'Vacina Influenza Quadrivalente',
-      'Vacina Meningocócica ACWY',
-      'Vacina Meningocócica B',
-      'Vacina Pneumocócica 20',
-      'Vacina Dengue',
-      'Vacina HPV Nonavalente'
+      'hepatite_ab',
+      'dtpa',
+      'triplice_viral',
+      'varicela',
+      'febre_amarela',
+      'pneumococica_13',
+      'pneumococica_15',
+      'influenza_quadrivalente',
+      'meningococica_acwy',
+      'meningococica_b',
+      'pneumococica_20',
+      'dengue',
+      'hpv_nonavalente'
     ]
   },
   gestante: {
@@ -68,10 +68,10 @@ export const vaccinesData = {
     subtitle: 'Todas as idades',
     icon: 'Heart',
     vaccines: [
-      'Vacina Hepatite B',
-      'Vacina Tríplice Bacteriana Dtpa',
-      'Vacina Influenza Quadrivalente',
-      'Vacina VSR (Vírus Sincicial Respiratório)'
+      'hepatite_b',
+      'dtpa',
+      'influenza_quadrivalente',
+      'vsr'
     ]
   },
   idoso: {
@@ -79,17 +79,17 @@ export const vaccinesData = {
     subtitle: '+60 anos',
     icon: 'Stethoscope',
     vaccines: [
-      'Vacina Tríplice Viral',
-      'Vacina Tríplice Bacteriana Dtpa',
-      'Vacina Pneumocócica 13',
-      'Vacina Pneumocócica 15',
-      'Vacina VSR (Vírus Sincicial Respiratório)',
-      'Vacina Influenza Quadrivalente 60+',
-      'Vacina Hepatite A+B',
-      'Vacina Pneumocócica 20',
-      'Vacina Meningocócica ACWY',
-      'Vacina Herpes Zoster',
-      'Vacina Influenza Quadrivalente'
+      'triplice_viral',
+      'dtpa',
+      'pneumococica_13',
+      'pneumococica_15',
+      'vsr',
+      'influenza_quadrivalente_60',
+      'hepatite_ab',
+      'pneumococica_20',
+      'meningococica_acwy',
+      'herpes_zoster',
+      'influenza_quadrivalente'
     ]
   }
 };

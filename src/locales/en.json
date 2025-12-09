@@ -106,7 +106,34 @@
         "subtitle": "+60 years"
       }
     },
-    "scheduleButton": "Schedule Vaccination for"
+    "scheduleButton": "Schedule Vaccination for",
+    "items": {
+      "hexavalente_acelular": "Hexavalent Acellular Vaccine",
+      "pneumococica_13": "Pneumococcal Conjugate Vaccine (PCV13)",
+      "pneumococica_15": "Pneumococcal Conjugate Vaccine (PCV15)",
+      "rotavirus_pentavalente": "Pentavalent Rotavirus Vaccine",
+      "meningococica_acwy": "Meningococcal ACWY Vaccine",
+      "meningococica_b": "Meningococcal B Vaccine",
+      "influenza_quadrivalente": "Quadrivalent Influenza Vaccine",
+      "febre_amarela": "Yellow Fever Vaccine",
+      "hepatite_a": "Hepatitis A Vaccine",
+      "triplice_viral": "MMR Vaccine (Measles, Mumps, Rubella)",
+      "varicela_catapora": "Varicella Vaccine (Chickenpox)",
+      "tetra_viral": "MMRV Vaccine (Measles, Mumps, Rubella, Varicella)",
+      "pentavalente_acelular": "Pentavalent Acellular Vaccine",
+      "dtpa_vip": "DTaP-IPV Vaccine",
+      "dengue": "Dengue Vaccine",
+      "hpv_nonavalente": "HPV 9-valent Vaccine",
+      "pneumococica_20": "Pneumococcal Conjugate Vaccine (PCV20)",
+      "beyfortus": "Beyfortus (nirsevimab)",
+      "hepatite_ab": "Hepatitis A+B Vaccine",
+      "dtpa": "DTaP Vaccine",
+      "varicela": "Varicella Vaccine",
+      "hepatite_b": "Hepatitis B Vaccine",
+      "vsr": "RSV Vaccine (Respiratory Syncytial Virus)",
+      "influenza_quadrivalente_60": "Quadrivalent Influenza Vaccine 60+",
+      "herpes_zoster": "Herpes Zoster Vaccine (Shingles)"
+    }
   },
   "plan": {
     "title": "Get a Vaccine Plan",
