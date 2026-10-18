@@ -5,11 +5,15 @@
     "howItWorks": "How It Works",
     "vaccines": "Vaccines",
     "plan": "Vaccine Plan",
+    "team": "About Us",
     "space": "Our Space",
     "contact": "Contact",
     "schedule": "Schedule",
     "scheduleWhatsApp": "Schedule via WhatsApp",
-    "language": "Language"
+    "language": "Language",
+    "homeVaccination": "Home vaccination",
+    "companies": "Companies",
+    "scheduleVaccine": "Book a vaccine"
   },
   "hero": {
     "badge": "Specialized Vaccination Clinic",
@@ -18,7 +22,25 @@
     "title3": "The Whole Family",
     "subtitle": "Schedule your vaccination with specialized professionals in Paraíso, São Paulo.",
     "button1": "View Available Vaccines",
-    "button2": "Schedule via WhatsApp"
+    "button2": "Schedule via WhatsApp",
+    "kicker": "Vaccination clinic in Paraíso · São Paulo",
+    "headline": "Protection for the whole family,",
+    "headlineHighlight": "at the clinic or at home.",
+    "lead": "Vaccines for babies, children, teenagers, adults, pregnant women and 60+. Book on WhatsApp and choose where you want to be seen.",
+    "clinicTitle": "At the clinic",
+    "clinicDetail": "220 m from Paraíso subway · Mon–Fri, 9am–6pm",
+    "homeTitle": "At home",
+    "homeDetail": "Up to 5 km from the clinic · Paraíso",
+    "free": "no fee",
+    "trust": [
+      "Private care, no health insurance",
+      "Pix, card, cash or payment link",
+      "Nurse dedicated to immunization"
+    ],
+    "rtLabel": "Technical director",
+    "rtValue": "Dr. Fernanda Favali Kruger · CRM-SP 140.995",
+    "whatsappClinic": "Hello! I would like to book a vaccine at the clinic.",
+    "whatsappHome": "Hello! I would like to know about home vaccination. My postal code is: "
   },
   "ageCards": {
     "title": "Who are you looking to protect?",
@@ -53,30 +75,35 @@
   },
   "howItWorks": {
     "title": "How does it work?",
-    "subtitle": "Simple and secure process to schedule your in-person vaccination",
+    "subtitle": "Get vaccinated at our clinic or in the comfort of your home",
     "steps": {
       "step1": {
-        "title": "Choose the service",
-        "description": "Browse the website and choose the vaccines you or your family need"
+        "tag": "Scheduling",
+        "title": "Choose and schedule",
+        "description": "Choose the vaccines you or your family need and contact us to schedule the best day and time"
       },
       "step2": {
-        "title": "Schedule your appointment",
-        "description": "Contact us to schedule on the best day and time for you"
+        "tag": "At the clinic",
+        "title": "Visit our clinic",
+        "description": "Come to our clinic on the scheduled day and time to receive your vaccination with comfort and safety"
       },
       "step3": {
-        "title": "Visit our clinic",
-        "description": "Come on the scheduled day and time to receive your vaccination with comfort and safety"
+        "tag": "At home",
+        "title": "Home vaccination",
+        "description": "Home vaccination in the Paraíso neighborhood and surroundings — check whether we cover your neighborhood",
+        "details": [
+          "Service within a radius of up to 5 km",
+          "Contact us to check availability",
+          "Paraíso neighborhood: no fee",
+          "Surrounding neighborhoods: fee applies"
+        ]
       },
       "step4": {
+        "tag": "Payment",
         "title": "Payment method",
         "description": "We accept Pix, Cash, Credit and Debit Cards, or Payment Link"
       }
     },
-    "important": "IMPORTANT:",
-    "importantText": "Appointment for",
-    "importantHighlight": "IN-PERSON",
-    "importantText2": "service at the clinic",
-    "noHomeVisits": "We do not provide home visits",
     "ctaButton": "SCHEDULE YOUR VACCINATION"
   },
   "vaccines": {
@@ -133,6 +160,33 @@
       "vsr": "RSV Vaccine (Respiratory Syncytial Virus)",
       "influenza_quadrivalente_60": "Quadrivalent Influenza Vaccine 60+",
       "herpes_zoster": "Herpes Zoster Vaccine (Shingles)"
+    },
+    "protects": {
+      "hexavalente_acelular": "Diphtheria, tetanus, pertussis, polio, Hib and hepatitis B",
+      "pneumococica_13": "Pneumococcal pneumonia, meningitis and otitis",
+      "pneumococica_15": "Pneumococcal pneumonia, meningitis and otitis",
+      "pneumococica_20": "Pneumococcal pneumonia, meningitis and otitis",
+      "rotavirus_pentavalente": "Severe rotavirus diarrhea",
+      "meningococica_acwy": "Meningococcal meningitis A, C, W and Y",
+      "meningococica_b": "Meningococcal meningitis B",
+      "influenza_quadrivalente": "Flu (influenza)",
+      "influenza_quadrivalente_60": "Flu (influenza), 60+ formulation",
+      "febre_amarela": "Yellow fever",
+      "hepatite_a": "Hepatitis A",
+      "hepatite_ab": "Hepatitis A and B",
+      "hepatite_b": "Hepatitis B",
+      "triplice_viral": "Measles, mumps and rubella",
+      "varicela_catapora": "Chickenpox (varicella)",
+      "varicela": "Chickenpox (varicella)",
+      "tetra_viral": "Measles, mumps, rubella and chickenpox",
+      "pentavalente_acelular": "Diphtheria, tetanus, pertussis, polio and Hib",
+      "dtpa_vip": "Diphtheria, tetanus, pertussis and polio",
+      "dtpa": "Diphtheria, tetanus and pertussis",
+      "dengue": "Dengue",
+      "hpv_nonavalente": "9 types of HPV",
+      "beyfortus": "Antibody against RSV, the main cause of bronchiolitis",
+      "vsr": "Respiratory syncytial virus (RSV)",
+      "herpes_zoster": "Shingles (herpes zoster)"
     }
   },
   "plan": {
@@ -227,6 +281,40 @@
     "badge": "Upon Request",
     "ctaButton": "Request Quote"
   },
+  "team": {
+    "title": "About Us",
+    "subtitle": "Meet the people who take care of your vaccination: qualified immunization professionals protecting your whole family",
+    "formationTitle": "Education",
+    "members": [
+      {
+        "name": "Dr. Fernanda Favali Kruger",
+        "role": "Pediatrician – Technical Director",
+        "registry": "CRM-SP 140.995 | RQE 37669",
+        "photo": "/assets/images/equipe/fernanda",
+        "bio": "A pediatrician trained in Pediatric Pulmonology with an MBA in Immunization, she combines clinical experience with children and specialized knowledge of vaccines to guide each family to the right vaccine at the right time.",
+        "formation": [
+          "Medical degree from Universidade São Francisco (USF)",
+          "Pediatrics residency, board-certified by the Brazilian Society of Pediatrics",
+          "Pediatric Pulmonology at UNICAMP",
+          "MBA in Human Immunization Management from Faculdade Focus"
+        ],
+        "focus": "25% 25%"
+      },
+      {
+        "name": "Nurse Ana Luiza Zampirolli",
+        "role": "Nurse",
+        "registry": "COREN-SP 628787",
+        "photo": "/assets/images/equipe/ana-luiza",
+        "bio": "She has worked in immunization at private clinics since 2022, including as technical lead nurse, focusing on vaccination, patient safety and warm, humanized care.",
+        "formation": [
+          "Nursing degree from USCS",
+          "Specialization in Occupational Health",
+          "Postgraduate degree in Infectious Diseases and Pandemics"
+        ],
+        "focus": "40% 30%"
+      }
+    ]
+  },
   "footer": {
     "title": "Get in Touch",
     "subtitle": "We are ready to care for your family's health with safety and professionalism.",
@@ -252,8 +340,13 @@
       "title": "Our Location",
       "building": "Clinic Facade",
       "buildingName": "Upside Paraíso Building",
-      "parking": "We do not have our own parking. However, there are several parking options in front of and around the clinic that you can use.",
-      "map": "Location Map"
+      "parking": "We do not have our own parking. As a suggestion, we recommend two private (paid) parking lots near the clinic:",
+      "map": "Location Map",
+      "parkingOptions": [
+        "Hotel Tryp Paraíso — Rua Afonso de Freitas, 148",
+        "Across the street — Rua Afonso de Freitas, 40"
+      ],
+      "parkingNote": "These are only suggestions: the clinic has no partnership with these parking lots."
     },
     "buttons": {
       "whatsapp": "Schedule via WhatsApp",
@@ -276,6 +369,120 @@
       "plan": "Hello! I would like to know more about the Vaccine Plan and its conditions. Can you help me?",
       "allCategories": "all categories"
     }
+  },
+  "finder": {
+    "kicker": "Available vaccines",
+    "title": "Find the right vaccine for each age",
+    "subtitle": "Choose the age group. If you cannot find the vaccine you need, talk to our team on WhatsApp.",
+    "protects": "Protects against",
+    "schedule": "Book",
+    "showing": "Showing {shown} of {total} vaccines for {group}.",
+    "showAll": "See all",
+    "showLess": "Show less",
+    "groups": {
+      "crianca": {
+        "title": "Babies and children",
+        "age": "0–12"
+      },
+      "adolescente": {
+        "title": "Teenagers",
+        "age": "12–19"
+      },
+      "adulto": {
+        "title": "Adults",
+        "age": "20–59"
+      },
+      "gestante": {
+        "title": "Pregnant women",
+        "age": "all ages"
+      },
+      "idoso": {
+        "title": "60+",
+        "age": "years"
+      }
+    },
+    "whatsappVaccine": "Hello! I would like to book the {vaccine} vaccine. Can you help me?"
+  },
+  "planBand": {
+    "title": "Vaccination plan",
+    "text": "Schedule every dose in advance and have it reserved for the right date, with special conditions.",
+    "cta": "Ask about conditions"
+  },
+  "home": {
+    "kicker": "Home vaccination",
+    "title": "The vaccine comes to you.",
+    "text": "We vaccinate at home within 5 km of the clinic. There is no travel fee in Paraíso; for nearby neighborhoods, the fee is informed when you book.",
+    "steps": [
+      {
+        "title": "Message us on WhatsApp",
+        "text": "Tell us which vaccines and your postal code."
+      },
+      {
+        "title": "We confirm area, fee and time",
+        "text": "You know the price before the visit."
+      },
+      {
+        "title": "The nurse comes to you",
+        "text": "Vaccines are carried refrigerated to your home."
+      }
+    ],
+    "cta": "Check my neighborhood",
+    "mapLabel": "Home vaccination area: 5 km radius from the clinic in Paraíso",
+    "mapCaption": "Approximate positions. Check your neighborhood on WhatsApp.",
+    "mapCenter": "PARAÍSO",
+    "mapFree": "no fee"
+  },
+  "clinicInfo": {
+    "kicker": "At the clinic",
+    "title": "How it works at the clinic",
+    "items": [
+      {
+        "title": "Book on WhatsApp",
+        "text": "Choose the vaccines and the best day and time."
+      },
+      {
+        "title": "Come to the clinic",
+        "text": "Rua Afonso de Freitas, 59, room 94, 220 m from Paraíso subway."
+      },
+      {
+        "title": "Pay your way",
+        "text": "Pix, cash, credit and debit card or payment link."
+      }
+    ]
+  },
+  "teamDesign": {
+    "kicker": "About us",
+    "coldKicker": "Storage",
+    "coldItems": [
+      "Refrigerator exclusive for vaccines",
+      "Dedicated vaccination room",
+      "Same care on home visits"
+    ],
+    "coldAlt": "The clinic vaccine refrigerator",
+    "pediatricsLink": "Pediatric practice"
+  },
+  "spaceDesign": {
+    "kicker": "Our space",
+    "title": "A vaccination room designed for families",
+    "subtitle": "Upside Paraíso building, room 94. A calm reception, a dedicated vaccination room and a refrigerator exclusive for vaccines.",
+    "captions": {
+      "entrada": "Entrance",
+      "espera": "Reception",
+      "sala": "Vaccination room",
+      "geladeira": "Refrigerator",
+      "atendimento": "Care"
+    }
+  },
+  "footerDesign": {
+    "schedule": "Book",
+    "hoursLine": "WhatsApp · Mon–Fri, 9am–6pm",
+    "address": "Address",
+    "howToGet": "Getting here",
+    "metroLine": "Paraíso subway, 220 m (lines 1-Blue and 2-Green)",
+    "parkingTitle": "Paid parking, no partnership:",
+    "sibling": "Same address",
+    "siblingName": "Dr. Fernanda Favali Kruger",
+    "siblingText": "Pediatric practice",
+    "map": "Open in Google Maps"
   }
 }
-

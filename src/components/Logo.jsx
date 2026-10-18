@@ -5,7 +5,7 @@ const Logo = ({ className = "", showText = true, size = "medium", imageSrc = nul
   const { t } = useTranslation();
   const sizeClasses = {
     small: "h-8 w-auto",
-    medium: "h-12 w-auto", 
+    medium: "h-12 w-auto",
     large: "h-16 w-auto"
   };
 
@@ -15,28 +15,25 @@ const Logo = ({ className = "", showText = true, size = "medium", imageSrc = nul
     large: "text-3xl"
   };
 
-  const imagePath = imageSrc || "/assets/images/Simbolo.png";
+  const imagePath = imageSrc || "/assets/images/simbolo.webp";
 
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      {/* Logo - usando imagem real */}
-      <div className="relative">
-        <img 
-          src={imagePath} 
-          alt="Mil Vacinas" 
-          className={`${sizeClasses[size]} drop-shadow-sm`}
-        />
-      </div>
-      
-      {/* Texto - opcional */}
+      <img
+        src={imagePath}
+        alt="Mil Vacinas"
+        className={sizeClasses[size]}
+      />
+
+      {/* Texto opcional (span, não h1: a página tem um único H1 no topo) */}
       {showText && (
         <div className="text-left">
-          <h1 className={`${textSizeClasses[size]} font-bold text-primary font-display`}>
+          <span className={`block ${textSizeClasses[size]} font-display font-bold text-mv-teal`}>
             Mil Vacinas
-          </h1>
-          <p className="text-sm text-textSecondary font-medium">
+          </span>
+          <span className="block text-sm font-medium text-mv-muted">
             {t('logo.tagline')}
-          </p>
+          </span>
         </div>
       )}
     </div>
