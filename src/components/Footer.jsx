@@ -1,255 +1,95 @@
 import React from 'react';
-import Logo from './Logo';
-import GoogleMaps from './GoogleMaps';
-import { Phone, Mail, MapPin, Clock, Navigation, Train, Instagram, Info } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
+
+const PEDIATRICS_URL = 'https://site-fernanda-oficial.vercel.app/';
+const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Rua Afonso de Freitas, 59, Paraíso, São Paulo - SP, 04006-050')}`;
 
 const Footer = () => {
   const { t } = useTranslation();
-  const currentYear = new Date().getFullYear();
-
-  const contactInfo = [
-    {
-      icon: Phone,
-      label: t('footer.contactInfo.whatsapp'),
-      value: '(11) 97313-9542',
-      link: 'https://wa.me/5511973139542'
-    },
-    {
-      icon: Mail,
-      label: t('footer.contactInfo.email'),
-      value: 'milvacinas@gmail.com',
-      link: 'mailto:milvacinas@gmail.com'
-    },
-    {
-      icon: Instagram,
-      label: t('footer.contactInfo.instagram'),
-      value: '@milvacinas',
-      link: 'https://www.instagram.com/milvacinas/'
-    },
-    {
-      icon: Clock,
-      label: t('footer.contactInfo.hours'),
-      value: t('footer.contactInfo.hoursValue'),
-      link: null
-    }
-  ];
+  const parkingOptions = t('footer.ourLocation.parkingOptions');
 
   return (
-    <footer className="bg-secondary border-t-4 border-primary">
-      <div className="container-max">
-        <div className="py-12">
-          {/* Título do Footer */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-text mb-4 font-display">
-              {t('footer.title')}
-            </h2>
-            <p className="text-textSecondary max-w-2xl mx-auto text-lg">
-              {t('footer.subtitle')}
-            </p>
-          </div>
+    <footer id="contact" className="border-t border-mv-line bg-mv-mist text-sm text-mv-muted">
+      <div className="container-max grid gap-8 px-4 pb-24 pt-12 sm:px-6 md:grid-cols-2 md:pb-7 md:pt-14 lg:grid-cols-[1.1fr_1fr_1.3fr_1.1fr] lg:px-8">
+        <div>
+          <h2 className="kicker mb-3 text-mv-petrol">{t('footerDesign.schedule')}</h2>
+          <a
+            href="https://wa.me/5511973139542"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-display text-xl font-bold text-mv-petrol hover:text-mv-teal"
+            style={{ fontVariationSettings: '"wdth" 90', fontVariantNumeric: 'tabular-nums' }}
+          >
+            (11) 97313-9542
+          </a>
+          <p>{t('footerDesign.hoursLine')}</p>
+          <p className="mt-3 grid gap-0.5">
+            <a href="mailto:milvacinas@gmail.com" className="hover:text-mv-teal">milvacinas@gmail.com</a>
+            <a href="https://www.instagram.com/milvacinas/" target="_blank" rel="noopener noreferrer" className="hover:text-mv-teal">@milvacinas</a>
+          </p>
+        </div>
 
-          {/* Seção de Contato e Localização */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            {/* Coluna 1: Informações de Contato */}
-            <div className="space-y-6">
-              <h3 className="text-xl font-bold text-text mb-4 font-display text-center lg:text-left">
-                {t('footer.contactInfo.title')}
-              </h3>
-              <div className="space-y-4">
-                {contactInfo.map((info, index) => {
-                  const IconComponent = info.icon;
-                  return (
-                    <div key={index} className="flex items-center gap-4 bg-white/60 p-4 rounded-lg">
-                      <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
-                        <IconComponent size={24} className="text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-text text-sm mb-1">
-                          {info.label}
-                        </h4>
-                        {info.link ? (
-                          <a
-                            href={info.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-textSecondary hover:text-primary transition-colors text-base font-medium"
-                          >
-                            {info.value}
-                          </a>
-                        ) : (
-                          <p className="text-textSecondary text-base">
-                            {info.value}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+        <div>
+          <h2 className="kicker mb-3 text-mv-petrol">{t('footerDesign.address')}</h2>
+          <p>
+            Rua Afonso de Freitas, 59, sala 94<br />
+            Paraíso, São Paulo – SP<br />
+            CEP 04006-050<br />
+            {t('footer.ourLocation.buildingName')}
+          </p>
+          <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center gap-1.5 font-bold text-mv-teal hover:underline">
+            <MapPin size={15} /> {t('footerDesign.map')} ↗
+          </a>
+        </div>
 
-            {/* Coluna 2: Endereço e Como Chegar */}
-            <div className="space-y-6">
-              <h3 className="text-xl font-bold text-text mb-4 font-display text-center lg:text-left">
-                {t('footer.location.title')}
-              </h3>
-              
-              {/* Endereço */}
-              <div className="flex items-start gap-4 bg-white/60 p-4 rounded-lg">
-                <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
-                  <MapPin size={24} className="text-primary" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-semibold text-text text-sm mb-1">
-                    {t('footer.location.address')}
-                  </h4>
-                  <a
-                    href="https://maps.google.com/?q=Rua+Afonso+de+Freitas,+59,+Paraíso,+São+Paulo,+SP"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-textSecondary hover:text-primary transition-colors text-base"
-                  >
-                    Rua Afonso de Freitas, nº 59, sala 94<br />
-                    Paraíso, São Paulo - SP<br />
-                    CEP 04.006-050
-                  </a>
-                </div>
-              </div>
+        <div>
+          <h2 className="kicker mb-3 text-mv-petrol">{t('footerDesign.howToGet')}</h2>
+          <p>{t('footerDesign.metroLine')}</p>
+          <p className="mt-3 font-semibold text-mv-ink">{t('footerDesign.parkingTitle')}</p>
+          <ul className="mt-1 grid gap-1.5">
+            {Array.isArray(parkingOptions) && parkingOptions.map((option) => {
+              const [name, address = name] = option.split(' — ');
+              const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${address}, Paraíso, São Paulo - SP`)}`;
+              return (
+                <li key={option}>
+                  <span className="text-mv-ink">{name}</span>
+                  {address !== name && (
+                    <>
+                      {' – '}
+                      <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="text-mv-teal underline underline-offset-2 hover:text-mv-petrol">
+                        {address}
+                      </a>
+                    </>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+          <p className="mt-1.5 text-xs italic">{t('footer.ourLocation.parkingNote')}</p>
+        </div>
 
-              {/* Metrô */}
-              <div className="flex items-start gap-4 bg-white/60 p-4 rounded-lg">
-                <div className="p-3 bg-accent/10 rounded-full flex-shrink-0">
-                  <Train size={24} className="text-accent" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-semibold text-text text-sm mb-1">
-                    {t('footer.location.howToGet')}
-                  </h4>
-                  <p className="text-textSecondary text-base">
-                    <strong>{t('footer.location.metro')}</strong> - {t('footer.location.metroDistance')}<br />
-                    {t('footer.location.metroLines')}<br />
-                    <span className="text-accent font-medium">{t('footer.location.walkingTime')}</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div>
+          <h2 className="kicker mb-3 text-mv-petrol">{t('footerDesign.sibling')}</h2>
+          <a
+            href={PEDIATRICS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 rounded-[14px] bg-white p-3 transition-colors hover:bg-mv-wash"
+          >
+            <span className="grid h-10 w-10 flex-shrink-0 place-items-center rounded-full bg-[#FDB4BE]">
+              <img src="/assets/images/fernanda-simbolo.webp" alt="" width="28" height="28" className="h-7 w-7 brightness-0 invert" />
+            </span>
+            <span>
+              <b className="block text-mv-petrol">{t('footerDesign.siblingName')}</b>
+              {t('footerDesign.siblingText')} ↗
+            </span>
+          </a>
+        </div>
 
-          {/* Seção: Foto do Prédio e Mapa */}
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold text-text text-center mb-8 font-display">
-              {t('footer.ourLocation.title')}
-            </h3>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
-              {/* Foto da fachada do prédio */}
-              <div className="rounded-xl shadow-lg bg-white overflow-hidden h-full flex flex-col">
-                <div className="flex-1 bg-gray-50 p-4 flex items-center justify-center">
-                  <img 
-                    src="/assets/images/fotopredio.png" 
-                    alt="Fachada da Clínica Mil Vacinas - Edifício Upside Paraíso"
-                    className="w-full h-auto object-contain rounded-lg"
-                  />
-                </div>
-                
-                <div className="p-4 space-y-3">
-                  <p className="text-textSecondary text-sm text-center font-medium">
-                    {t('footer.ourLocation.buildingName')}
-                  </p>
-                  
-                  {/* Informação sobre estacionamento */}
-                  <div className="p-3 bg-blue-50 rounded-lg border border-blue-100">
-                    <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mt-0.5">
-                        <Info size={14} className="text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <p className="text-text text-sm leading-relaxed">
-                          {t('footer.ourLocation.parking')}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Mapa do Google Maps */}
-              <div className="rounded-xl shadow-lg bg-white overflow-hidden h-full flex flex-col">
-                <div className="p-5 border-b border-gray-100">
-                  <h4 className="font-bold text-text text-center text-lg">
-                    {t('footer.ourLocation.map')}
-                  </h4>
-                </div>
-                
-                <div className="flex-1">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1234567890!2d-46.654321!3d-23.567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRua%20Afonso%20de%20Freitas%2C%2059%20-%20Para%C3%ADso%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0, minHeight: '500px' }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Localização da Clínica Mil Vacinas"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Botões de Contato */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a
-              href="https://wa.me/5511973139542"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary text-center inline-flex items-center justify-center gap-2"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-              </svg>
-              {t('footer.buttons.whatsapp')}
-            </a>
-            <a
-              href="mailto:milvacinas@gmail.com"
-              className="btn-secondary text-center inline-flex items-center justify-center gap-2"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              {t('footer.buttons.email')}
-            </a>
-            <a
-              href="https://www.instagram.com/milvacinas/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary text-center inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
-              {t('footer.buttons.instagram')}
-            </a>
-          </div>
-
-          {/* Divisor */}
-          <div className="border-t border-primary/20 pt-8">
-            <div className="text-center space-y-2">
-              <p className="text-text font-bold text-base">
-                {t('footer.company.name')}
-              </p>
-              <p className="text-textSecondary text-sm">
-                {t('footer.company.responsible')}
-              </p>
-              <p className="text-textSecondary text-sm">
-                {t('footer.company.cnpj')}
-              </p>
-              <p className="text-textSecondary text-sm">
-                {t('footer.company.crm')}
-              </p>
-            </div>
-          </div>
+        <div className="flex flex-wrap gap-x-5 gap-y-1.5 border-t border-mv-line pt-4 text-xs md:col-span-2 lg:col-span-4">
+          <span>{t('footer.company.name')} · {t('footer.company.cnpj')}</span>
+          <span>{t('footer.company.responsible')} · {t('footer.company.crm')}</span>
         </div>
       </div>
     </footer>

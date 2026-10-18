@@ -6,34 +6,59 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    font-family: 'Montserrat', sans-serif;
+    @apply font-sans text-mv-ink bg-white antialiased;
+  }
+
+  /* compensa a navbar fixa ao rolar para as âncoras */
+  [id] {
+    scroll-margin-top: 84px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
   }
 }
 
 @layer components {
+  /* Títulos em Archivo semicondensada */
+  .font-disp {
+    @apply font-display text-mv-petrol;
+    font-variation-settings: "wdth" 85;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  .kicker {
+    @apply font-display text-xs font-bold uppercase text-mv-teal;
+    letter-spacing: 0.14em;
+  }
+
   .btn-primary {
-    @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-primary/90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary/50;
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-mv-btn px-6 py-3 font-bold text-mv-btnInk transition duration-150 hover:-translate-y-px hover:bg-mv-btnHover focus:outline-none focus-visible:ring-2 focus-visible:ring-mv-petrol focus-visible:ring-offset-2;
   }
-  
+
   .btn-secondary {
-    @apply bg-secondary text-primary px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-secondary/90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary/50;
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl border-[1.5px] border-mv-line bg-white px-6 py-3 font-bold text-mv-petrol transition duration-150 hover:-translate-y-px hover:border-mv-btn focus:outline-none focus-visible:ring-2 focus-visible:ring-mv-petrol focus-visible:ring-offset-2;
   }
-  
+
+  .btn-heart {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-mv-heart px-6 py-3 font-bold text-mv-heartInk transition duration-150 hover:-translate-y-px focus:outline-none focus-visible:ring-2 focus-visible:ring-mv-petrol focus-visible:ring-offset-2;
+  }
+
   .card {
-    @apply bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply rounded-2xl border-[1.5px] border-mv-line bg-white transition duration-150 hover:-translate-y-0.5 hover:border-mv-btn;
   }
-  
-  .card-overlay {
-    @apply bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
-  }
-  
+
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-16;
+    @apply px-4 py-16 sm:px-6 md:py-24 lg:px-8;
   }
-  
+
   .container-max {
-    @apply max-w-6xl mx-auto;
+    @apply mx-auto max-w-6xl;
   }
 }

@@ -1,96 +1,43 @@
 import React from 'react';
-import Section from './Section';
-import Card from './Card';
-import Button from './Button';
-import { MapPin, Calendar, Building2, CreditCard } from 'lucide-react';
+import { Calendar, Building2, CreditCard } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
+// "Na clínica": agendamento, visita e pagamento.
+// A vacinação domiciliar (step3) tem seção própria: HomeVaccinationSection.
 const HowItWorksSection = () => {
   const { t } = useTranslation();
-  
-  const steps = [
-    {
-      icon: MapPin,
-      title: t('howItWorks.steps.step1.title'),
-      description: t('howItWorks.steps.step1.description')
-    },
-    {
-      icon: Calendar,
-      title: t('howItWorks.steps.step2.title'),
-      description: t('howItWorks.steps.step2.description')
-    },
-    {
-      icon: Building2,
-      title: t('howItWorks.steps.step3.title'),
-      description: t('howItWorks.steps.step3.description')
-    },
-    {
-      icon: CreditCard,
-      title: t('howItWorks.steps.step4.title'),
-      description: t('howItWorks.steps.step4.description')
-    }
-  ];
 
-  const handleScheduleClick = () => {
-    window.open('https://wa.me/5511973139542', '_blank');
-  };
+  const steps = [
+    { icon: Calendar, key: 'step1' },
+    { icon: Building2, key: 'step2' },
+    { icon: CreditCard, key: 'step4' }
+  ].map(({ icon, key }) => ({
+    icon,
+    title: t(`howItWorks.steps.${key}.title`),
+    description: t(`howItWorks.steps.${key}.description`)
+  }));
 
   return (
-    <Section backgroundColor="accent" className="text-white">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">
-          {t('howItWorks.title')}
-        </h2>
-        <p className="text-xl opacity-90 max-w-2xl mx-auto">
-          {t('howItWorks.subtitle')}
-        </p>
-      </div>
+    <section className="section-padding bg-white">
+      <div className="container-max">
+        <span className="kicker">{t('clinicInfo.kicker')}</span>
+        <h2 className="font-disp mb-8 mt-2.5 text-[34px] md:text-[44px]">{t('clinicInfo.title')}</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-        {steps.map((step, index) => {
-          const IconComponent = step.icon;
-          return (
-            <Card
-              key={index}
-              className="p-8 text-center bg-white/95 backdrop-blur-sm border border-white/30 hover:bg-white transition-all duration-300 shadow-lg"
-            >
-              <div className="flex flex-col items-center">
-                {/* Número do passo */}
-                <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center text-xl font-bold mb-4 text-accent">
-                  {index + 1}
-                </div>
-                
-                {/* Ícone */}
-                <div className="mb-6 p-4 bg-accent/20 rounded-full">
-                  <IconComponent size={32} className="text-accent" />
-                </div>
-                
-                <h3 className="text-xl font-bold mb-4 font-display text-text">
-                  {step.title}
-                </h3>
-                
-                <p className="text-sm text-textSecondary leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            </Card>
-          );
-        })}
+        <div className="grid gap-4 md:grid-cols-3">
+          {steps.map(({ icon: Icon, title, description }) => (
+            <div key={title} className="rounded-2xl bg-mv-mist p-6">
+              <span className="mb-4 grid h-11 w-11 place-items-center rounded-xl bg-white text-mv-teal">
+                <Icon size={22} />
+              </span>
+              <h3 className="font-display text-xl font-bold text-mv-petrol" style={{ fontVariationSettings: '"wdth" 90' }}>
+                {title}
+              </h3>
+              <p className="mt-2 text-[14.5px] leading-relaxed text-mv-muted">{description}</p>
+            </div>
+          ))}
+        </div>
       </div>
-
-      {/* CTA Principal */}
-      <div className="text-center">
-        
-        <Button
-          size="lg"
-          variant="secondary"
-          onClick={handleScheduleClick}
-          className="text-lg bg-white text-accent hover:bg-white/90"
-        >
-          {t('howItWorks.ctaButton')}
-        </Button>
-      </div>
-    </Section>
+    </section>
   );
 };
 

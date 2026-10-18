@@ -1,172 +1,58 @@
 import React from 'react';
-import Section from './Section';
-import Carousel from './Carousel';
-import { Heart, Award, Users } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
+
+// Mosaico de fotos em WebP (antes: carrossel com fotos de 10–19 MB montadas de uma vez).
+const PHOTOS = [
+  { src: '/assets/images/consultorio/salavacina.webp', w: 960, h: 1280, key: 'sala', alt: 'Sala de vacinação da Mil Vacinas', pos: '50% 50%' },
+  { src: '/assets/images/fotopredio.webp', w: 832, h: 1248, key: 'fachada', alt: 'Fachada do Edifício Upside Paraíso', pos: '50% 40%' },
+  { src: '/assets/images/consultorio/entrada.webp', w: 1200, h: 1800, key: 'entrada', alt: 'Entrada da clínica', pos: '50% 45%' },
+  { src: '/assets/images/consultorio/salaespera.webp', w: 1200, h: 1800, key: 'espera', alt: 'Recepção', pos: '50% 55%' },
+  { src: '/assets/images/consultorio/geladeira.webp', w: 900, h: 1600, key: 'geladeira', alt: 'Refrigerador exclusivo para vacinas', pos: '50% 40%' }
+];
 
 const SpaceSection = () => {
   const { t } = useTranslation();
-  
-  const images = [
-    {
-      src: '/assets/images/consultorio/fernanda.jpg',
-      alt: 'Dra. Fernanda Favali Kruger',
-      key: 'fernanda',
-      type: 'image'
-    },
-    {
-      src: '/assets/images/consultorio/fernanda-entrada.jpg',
-      alt: 'Dra. Fernanda na entrada da clínica',
-      key: 'clinica',
-      type: 'image'
-    },
-    {
-      src: '/assets/images/consultorio/fernandavacina.jpg',
-      alt: 'Dra. Fernanda aplicando vacina',
-      key: 'atendimento',
-      type: 'image'
-    },
-    {
-      src: '/assets/images/consultorio/entrada.jpg',
-      alt: 'Entrada da clínica',
-      key: 'entrada',
-      type: 'image'
-    },
-    {
-      src: '/assets/images/consultorio/salaespera.jpg',
-      alt: 'Sala de espera',
-      key: 'salaEspera',
-      type: 'image'
-    },
-    {
-      src: '/assets/images/consultorio/salaespera2.jpg',
-      alt: 'Sala de espera 2',
-      key: 'ambienteAconchegante',
-      type: 'image'
-    },
-    {
-      src: '/assets/images/consultorio/salavacina.jpg',
-      alt: 'Sala de vacinação',
-      key: 'salaVacina',
-      type: 'image'
-    },
-    {
-      src: '/assets/images/consultorio/salavacina2.jpg',
-      alt: 'Sala de vacinação 2',
-      key: 'ambienteSeguro',
-      type: 'image'
-    },
-    {
-      src: '/assets/images/consultorio/salavacina3.jpg',
-      alt: 'Sala de vacinação 3',
-      key: 'tecnologia',
-      type: 'image'
-    },
-    {
-      src: '/assets/images/consultorio/geladeira.jpg',
-      alt: 'Geladeira para armazenamento de vacinas',
-      key: 'armazenamento',
-      type: 'image'
-    },
-    {
-      src: '/assets/images/consultorio/video-vacina.mp4',
-      alt: 'Processo de vacinação',
-      key: 'video',
-      type: 'video'
-    }
-  ].map(img => ({
-    ...img,
-    title: t(`space.images.${img.key}.title`),
-    description: t(`space.images.${img.key}.description`)
-  }));
 
-  const highlights = [
-    {
-      icon: Heart,
-      key: 'highlight1'
-    },
-    {
-      icon: Award,
-      key: 'highlight2'
-    },
-    {
-      icon: Users,
-      key: 'highlight3'
-    }
-  ].map(h => ({
-    ...h,
-    title: t(`space.highlights.${h.key}.title`),
-    description: t(`space.highlights.${h.key}.description`)
-  }));
+  const caption = (key) => (key === 'fachada' ? t('footer.ourLocation.buildingName') : t(`spaceDesign.captions.${key}`));
 
   return (
-    <Section 
-      id="conheca-nosso-espaco" 
-      className="bg-gradient-to-b from-white to-gray-50"
-    >
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
-          <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-          {t('space.badge')}
+    <section id="space-section" className="section-padding bg-mv-mist">
+      <div className="container-max">
+        <div className="mb-7 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end md:gap-6">
+          <div>
+            <span className="kicker">{t('spaceDesign.kicker')}</span>
+            <h2 className="font-disp mt-2.5 text-[34px] md:text-[44px]">{t('spaceDesign.title')}</h2>
+          </div>
+          <p className="max-w-[28em] text-mv-muted">{t('spaceDesign.subtitle')}</p>
         </div>
-        
-        <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
-          {t('space.title')} <span className="text-primary">{t('space.titleHighlight')}</span>
-        </h2>
-        
-        <p className="text-lg text-textSecondary max-w-2xl mx-auto">
-          {t('space.subtitle')}
-        </p>
-      </div>
 
-      {/* Carrossel de fotos */}
-      <div className="mb-16">
-        <Carousel images={images} autoPlay={true} interval={5000} />
-      </div>
-
-      {/* Destaques */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        {highlights.map((highlight, index) => {
-          const IconComponent = highlight.icon;
-          return (
-            <div 
-              key={index}
-              className="text-center p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-[1.2fr_.8fr_.8fr] md:grid-rows-[260px_260px] md:gap-4">
+          {PHOTOS.map((photo, index) => (
+            <figure
+              key={photo.key}
+              className={`relative m-0 overflow-hidden rounded-[20px] ${
+                index === 0 ? 'col-span-2 h-[260px] md:col-span-1 md:row-span-2 md:h-auto' : 'h-[170px] md:h-auto'
+              }`}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                <IconComponent size={32} className="text-primary" />
-              </div>
-              <h3 className="text-xl font-bold text-text mb-2">
-                {highlight.title}
-              </h3>
-              <p className="text-textSecondary">
-                {highlight.description}
-              </p>
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Call to action */}
-      <div className="mt-12 text-center">
-        <div className="inline-block bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 max-w-2xl">
-          <p className="text-lg text-text mb-4">
-            <span className="font-bold text-primary">{t('space.ctaTitle')}</span> {t('space.ctaText')}
-          </p>
-          <button
-            onClick={() => window.open('https://wa.me/5511973139542', '_blank')}
-            className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-          >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-            </svg>
-            {t('space.ctaButton')}
-          </button>
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                width={photo.w}
+                height={photo.h}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.04]"
+                style={{ objectPosition: photo.pos }}
+              />
+              <figcaption className="absolute bottom-3 left-3 rounded-full bg-white/90 px-3 py-1 text-[12.5px] font-semibold text-mv-petrol">
+                {caption(photo.key)}
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </div>
-    </Section>
+    </section>
   );
 };
 
 export default SpaceSection;
-

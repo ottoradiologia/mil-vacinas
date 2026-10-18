@@ -4,12 +4,16 @@
     "ageCards": "Faixas Etárias",
     "howItWorks": "Como Funciona",
     "vaccines": "Vacinas",
-    "plan": "Plano Vacina",
+    "plan": "Plano Vacinal",
+    "team": "Quem Somos",
     "space": "Nosso Espaço",
     "contact": "Contato",
     "schedule": "Agendar",
     "scheduleWhatsApp": "Agendar pelo WhatsApp",
-    "language": "Idioma"
+    "language": "Idioma",
+    "homeVaccination": "Vacina em casa",
+    "companies": "Empresas",
+    "scheduleVaccine": "Agendar vacina"
   },
   "hero": {
     "badge": "Clínica Especializada em Vacinação",
@@ -18,7 +22,25 @@
     "title3": "Toda a Família",
     "subtitle": "Agende sua vacinação com profissionais especializados no bairro do Paraíso, São Paulo.",
     "button1": "Ver Vacinas Disponíveis",
-    "button2": "Agendar pelo WhatsApp"
+    "button2": "Agendar pelo WhatsApp",
+    "kicker": "Clínica de vacinação no Paraíso · São Paulo",
+    "headline": "Proteção para toda a família,",
+    "headlineHighlight": "na clínica ou em casa.",
+    "lead": "Vacinas para bebês, crianças, adolescentes, adultos, gestantes e 60+. Agende pelo WhatsApp e escolha onde quer ser atendido.",
+    "clinicTitle": "Na clínica",
+    "clinicDetail": "220 m do Metrô Paraíso · seg a sex, 9h às 18h",
+    "homeTitle": "Em casa",
+    "homeDetail": "Até 5 km da clínica · Paraíso",
+    "free": "sem taxa",
+    "trust": [
+      "Atendimento particular, sem convênio",
+      "Pix, cartão, dinheiro ou link de pagamento",
+      "Enfermeira dedicada à imunização"
+    ],
+    "rtLabel": "Responsável técnica",
+    "rtValue": "Dra. Fernanda Favali Kruger · CRM-SP 140.995",
+    "whatsappClinic": "Olá! Gostaria de agendar uma vacina na clínica.",
+    "whatsappHome": "Olá! Gostaria de saber sobre a vacinação em casa. Meu CEP é: "
   },
   "ageCards": {
     "title": "Para quem você busca proteção?",
@@ -53,30 +75,35 @@
   },
   "howItWorks": {
     "title": "Como funciona?",
-    "subtitle": "Processo simples e seguro para agendar sua vacinação presencial",
+    "subtitle": "Vacine-se na nossa clínica ou receba a vacinação no conforto da sua casa",
     "steps": {
       "step1": {
-        "title": "Escolha o serviço",
-        "description": "Navegue pelo site e escolha as vacinas que você ou sua família precisam"
+        "tag": "Agendamento",
+        "title": "Escolha e agende",
+        "description": "Escolha as vacinas que você ou sua família precisam e entre em contato para agendar o melhor dia e horário"
       },
       "step2": {
-        "title": "Agende seu horário",
-        "description": "Entre em contato para agendar no melhor dia e horário para você"
+        "tag": "Na clínica",
+        "title": "Venha até nossa clínica",
+        "description": "Venha até nossa clínica, compareça no dia e horário agendados para realizar sua vacinação com conforto e segurança"
       },
       "step3": {
-        "title": "Venha até nossa clínica",
-        "description": "Compareça no dia e hora agendados para realizar sua vacinação com conforto e segurança"
+        "tag": "Em casa",
+        "title": "Vacinação domiciliar",
+        "description": "Vacinação domiciliar no bairro Paraíso e arredores, consulte seu bairro para ver se abrangemos",
+        "details": [
+          "Atendimento em um raio de até 5 km",
+          "Entre em contato para checar a disponibilidade",
+          "Bairro Paraíso: isento de taxa",
+          "Demais bairros ao redor: com cobrança de taxa"
+        ]
       },
       "step4": {
+        "tag": "Pagamento",
         "title": "Forma de pagamento",
         "description": "Aceitamos Pix, Dinheiro, Cartão de Crédito e Débito ou Link de Pagamento"
       }
     },
-    "important": "IMPORTANTE:",
-    "importantText": "Agendamento para atendimento",
-    "importantHighlight": "PRESENCIAL",
-    "importantText2": "na clínica",
-    "noHomeVisits": "Não realizamos visitas domiciliares",
     "ctaButton": "AGENDAR SUA VACINAÇÃO"
   },
   "vaccines": {
@@ -133,6 +160,33 @@
       "vsr": "Vacina VSR (Vírus Sincicial Respiratório)",
       "influenza_quadrivalente_60": "Vacina Influenza Quadrivalente 60+",
       "herpes_zoster": "Vacina Herpes Zoster"
+    },
+    "protects": {
+      "hexavalente_acelular": "Difteria, tétano, coqueluche, pólio, Hib e hepatite B",
+      "pneumococica_13": "Pneumonia, meningite e otite por pneumococo",
+      "pneumococica_15": "Pneumonia, meningite e otite por pneumococo",
+      "pneumococica_20": "Pneumonia, meningite e otite por pneumococo",
+      "rotavirus_pentavalente": "Diarreia grave por rotavírus",
+      "meningococica_acwy": "Meningites meningocócicas A, C, W e Y",
+      "meningococica_b": "Meningite meningocócica B",
+      "influenza_quadrivalente": "Gripe (influenza)",
+      "influenza_quadrivalente_60": "Gripe (influenza), formulação para 60+",
+      "febre_amarela": "Febre amarela",
+      "hepatite_a": "Hepatite A",
+      "hepatite_ab": "Hepatites A e B",
+      "hepatite_b": "Hepatite B",
+      "triplice_viral": "Sarampo, caxumba e rubéola",
+      "varicela_catapora": "Catapora (varicela)",
+      "varicela": "Catapora (varicela)",
+      "tetra_viral": "Sarampo, caxumba, rubéola e catapora",
+      "pentavalente_acelular": "Difteria, tétano, coqueluche, pólio e Hib",
+      "dtpa_vip": "Difteria, tétano, coqueluche e pólio",
+      "dtpa": "Difteria, tétano e coqueluche",
+      "dengue": "Dengue",
+      "hpv_nonavalente": "9 tipos de HPV",
+      "beyfortus": "Anticorpo contra o VSR, principal causa de bronquiolite",
+      "vsr": "Vírus sincicial respiratório (VSR)",
+      "herpes_zoster": "Herpes-zóster (cobreiro)"
     }
   },
   "plan": {
@@ -145,7 +199,7 @@
       },
       "benefit2": {
         "title": "Facilite o agendamento",
-        "description": "Com o plano vacina você já deixa todas as vacinas agendadas e as doses ficam reservadas para serem realizadas na data correta"
+        "description": "Com o plano vacinal você já deixa todas as vacinas agendadas e as doses ficam reservadas para serem realizadas na data correta"
       }
     },
     "ctaButton": "CONSULTAR CONDIÇÕES",
@@ -227,6 +281,40 @@
     "badge": "Sob Consulta",
     "ctaButton": "Solicitar Orçamento"
   },
+  "team": {
+    "title": "Quem Somos",
+    "subtitle": "Conheça quem cuida da sua vacinação: profissionais qualificados em imunização para proteger toda a sua família",
+    "formationTitle": "Formação",
+    "members": [
+      {
+        "name": "Dra. Fernanda Favali Kruger",
+        "role": "Médica Pediatra – Responsável Técnica",
+        "registry": "CRM-SP 140.995 | RQE 37669",
+        "photo": "/assets/images/equipe/fernanda",
+        "bio": "Pediatra com formação em Pneumologia Pediátrica e MBA em Imunização, une a experiência clínica com crianças ao conhecimento especializado em vacinas para orientar cada família sobre a vacina certa, no momento certo.",
+        "formation": [
+          "Graduação em Medicina pela Universidade São Francisco (USF)",
+          "Residência em Pediatria, com Título de Especialista pela SBP",
+          "Pneumologia Pediátrica pela UNICAMP",
+          "MBA em Gestão em Imunização Humana pela Faculdade Focus"
+        ],
+        "focus": "25% 25%"
+      },
+      {
+        "name": "Enf. Ana Luiza Zampirolli",
+        "role": "Enfermeira",
+        "registry": "COREN-SP 628787",
+        "photo": "/assets/images/equipe/ana-luiza",
+        "bio": "Atua em imunização em clínicas privadas desde 2022, com experiência como enfermeira responsável técnica, com foco em vacinação, segurança do paciente e atendimento acolhedor e humanizado.",
+        "formation": [
+          "Graduação em Enfermagem pela USCS",
+          "Especialização em Saúde do Trabalho",
+          "Pós-graduação em Doenças Infecciosas e Pandemias"
+        ],
+        "focus": "40% 30%"
+      }
+    ]
+  },
   "footer": {
     "title": "Entre em Contato",
     "subtitle": "Estamos prontos para cuidar da saúde da sua família com segurança e profissionalismo.",
@@ -252,8 +340,13 @@
       "title": "Nossa Localização",
       "building": "Fachada da Clínica",
       "buildingName": "Edifício Upside Paraíso",
-      "parking": "Não possuímos estacionamento próprio. No entanto, há diversas opções de estacionamentos em frente e ao redor da clínica que você pode utilizar.",
-      "map": "Mapa de Localização"
+      "parking": "Não possuímos estacionamento próprio. Como sugestão, recomendamos dois estacionamentos privados (pagos) próximos ao consultório:",
+      "map": "Mapa de Localização",
+      "parkingOptions": [
+        "Hotel Tryp Paraíso — Rua Afonso de Freitas, nº 148",
+        "Do outro lado da rua — Rua Afonso de Freitas, nº 40"
+      ],
+      "parkingNote": "São apenas sugestões: a clínica não possui convênio com esses estacionamentos."
     },
     "buttons": {
       "whatsapp": "Agendar pelo WhatsApp",
@@ -273,9 +366,123 @@
   "whatsapp": {
     "messages": {
       "schedule": "Olá! Gostaria de agendar uma vacinação para {category}. Podem me ajudar?",
-      "plan": "Olá! Gostaria de saber mais sobre o Plano Vacina e suas condições. Podem me ajudar?",
+      "plan": "Olá! Gostaria de saber mais sobre o Plano Vacinal e suas condições. Podem me ajudar?",
       "allCategories": "todas as categorias"
     }
+  },
+  "finder": {
+    "kicker": "Vacinas disponíveis",
+    "title": "Encontre a vacina certa para cada idade",
+    "subtitle": "Escolha a faixa etária. Se não encontrar a vacina que procura, fale com a equipe pelo WhatsApp.",
+    "protects": "Protege contra",
+    "schedule": "Agendar",
+    "showing": "Mostrando {shown} de {total} vacinas para {group}.",
+    "showAll": "Ver todas",
+    "showLess": "Mostrar menos",
+    "groups": {
+      "crianca": {
+        "title": "Bebês e crianças",
+        "age": "0–12"
+      },
+      "adolescente": {
+        "title": "Adolescentes",
+        "age": "12–19"
+      },
+      "adulto": {
+        "title": "Adultos",
+        "age": "20–59"
+      },
+      "gestante": {
+        "title": "Gestantes",
+        "age": "todas as idades"
+      },
+      "idoso": {
+        "title": "60+",
+        "age": "anos"
+      }
+    },
+    "whatsappVaccine": "Olá! Gostaria de agendar a vacina {vaccine}. Podem me ajudar?"
+  },
+  "planBand": {
+    "title": "Plano vacinal",
+    "text": "Deixe todas as doses agendadas e reservadas para a data certa, com condições especiais.",
+    "cta": "Consultar condições"
+  },
+  "home": {
+    "kicker": "Vacinação domiciliar",
+    "title": "A vacina vai até você.",
+    "text": "Atendemos em casa num raio de até 5 km da clínica. No Paraíso não há taxa de deslocamento; nos bairros ao redor, a taxa é informada no agendamento.",
+    "steps": [
+      {
+        "title": "Chame no WhatsApp",
+        "text": "Diga quais vacinas e o seu CEP."
+      },
+      {
+        "title": "Confirmamos bairro, taxa e horário",
+        "text": "Você sabe o valor antes da visita."
+      },
+      {
+        "title": "A enfermeira vai até você",
+        "text": "As vacinas são levadas refrigeradas até a sua casa."
+      }
+    ],
+    "cta": "Consultar meu bairro",
+    "mapLabel": "Área de atendimento domiciliar: raio de 5 km a partir da clínica no Paraíso",
+    "mapCaption": "Posições aproximadas. Consulte seu bairro pelo WhatsApp.",
+    "mapCenter": "PARAÍSO",
+    "mapFree": "sem taxa"
+  },
+  "clinicInfo": {
+    "kicker": "Na clínica",
+    "title": "Como funciona na clínica",
+    "items": [
+      {
+        "title": "Agende pelo WhatsApp",
+        "text": "Escolha as vacinas e o melhor dia e horário."
+      },
+      {
+        "title": "Venha até a clínica",
+        "text": "Rua Afonso de Freitas, 59, sala 94, a 220 m do Metrô Paraíso."
+      },
+      {
+        "title": "Pague como preferir",
+        "text": "Pix, dinheiro, cartão de crédito e débito ou link de pagamento."
+      }
+    ]
+  },
+  "teamDesign": {
+    "kicker": "Quem somos",
+    "coldKicker": "Conservação",
+    "coldItems": [
+      "Refrigerador exclusivo para vacinas",
+      "Sala de vacinação própria",
+      "Mesmo cuidado na visita domiciliar"
+    ],
+    "coldAlt": "Refrigerador de vacinas da clínica",
+    "pediatricsLink": "Consultório de pediatria"
+  },
+  "spaceDesign": {
+    "kicker": "Nosso espaço",
+    "title": "Uma sala de vacinação pensada para a família",
+    "subtitle": "Edifício Upside Paraíso, sala 94. Recepção tranquila, sala de vacinação própria e refrigerador exclusivo para vacinas.",
+    "captions": {
+      "entrada": "Entrada",
+      "espera": "Recepção",
+      "sala": "Sala de vacinação",
+      "geladeira": "Refrigerador",
+      "atendimento": "Atendimento"
+    }
+  },
+  "footerDesign": {
+    "schedule": "Agende",
+    "hoursLine": "WhatsApp · seg a sex, 9h às 18h",
+    "address": "Endereço",
+    "howToGet": "Como chegar",
+    "metroLine": "Metrô Paraíso, 220 m (linhas 1-Azul e 2-Verde)",
+    "parkingTitle": "Estacionamentos pagos, sem convênio:",
+    "sibling": "No mesmo endereço",
+    "siblingName": "Dra. Fernanda Favali Kruger",
+    "siblingText": "Consultório de pediatria",
+    "map": "Abrir no Google Maps"
   }
 }
-
