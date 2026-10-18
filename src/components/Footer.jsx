@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin } from 'lucide-react';
+import GoogleMaps from './GoogleMaps';
 import { useTranslation } from '../hooks/useTranslation';
 
 const PEDIATRICS_URL = 'https://site-fernanda-oficial.vercel.app/';
@@ -11,7 +12,32 @@ const Footer = () => {
 
   return (
     <footer id="contact" className="border-t border-mv-line bg-mv-mist text-sm text-mv-muted">
-      <div className="container-max grid gap-8 px-4 pb-24 pt-12 sm:px-6 md:grid-cols-2 md:pb-7 md:pt-14 lg:grid-cols-[1.1fr_1fr_1.3fr_1.1fr] lg:px-8">
+      {/* Onde nos encontrar: foto do prédio + mapa */}
+      <div className="container-max px-4 pt-12 sm:px-6 md:pt-14 lg:px-8">
+        <h2 className="kicker mb-4 text-mv-petrol">{t('footerDesign.whereTitle')}</h2>
+        <div className="grid gap-4 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
+          <figure className="overflow-hidden rounded-[14px] bg-white shadow-sm">
+            <img
+              src="/assets/images/fotopredio.webp"
+              alt={`Fachada do ${t('footer.ourLocation.buildingName')}`}
+              width="832"
+              height="1248"
+              loading="lazy"
+              decoding="async"
+              className="h-72 w-full object-cover md:h-80"
+              style={{ objectPosition: '50% 40%' }}
+            />
+            <figcaption className="px-4 py-2.5 text-center font-medium text-mv-ink">
+              {t('footer.ourLocation.buildingName')} · Rua Afonso de Freitas, 59
+            </figcaption>
+          </figure>
+          <div className="h-72 overflow-hidden rounded-[14px] bg-white shadow-sm md:h-auto md:min-h-[20rem]">
+            <GoogleMaps className="h-full" height="100%" />
+          </div>
+        </div>
+      </div>
+
+      <div className="container-max grid gap-8 px-4 pb-24 pt-10 sm:px-6 md:grid-cols-2 md:pb-7 md:pt-12 lg:grid-cols-[1.1fr_1fr_1.3fr_1.1fr] lg:px-8">
         <div>
           <h2 className="kicker mb-3 text-mv-petrol">{t('footerDesign.schedule')}</h2>
           <a
