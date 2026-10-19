@@ -65,31 +65,18 @@ const HeroSection = () => {
         </div>
 
         <figure className="order-first m-0 grid justify-items-center gap-5 lg:order-none">
-          <div className="relative w-[240px] md:w-[min(100%,420px)]">
-            <div className="aspect-square overflow-hidden rounded-full border-[6px] border-white bg-mv-wash shadow-[0_30px_60px_-36px_rgba(31,77,74,.55)]">
-              <img
-                src="/assets/images/equipe/ana-luiza.webp"
-                alt="Enfermeira Ana Luiza Zampirolli na sala de vacinação da Mil Vacinas"
-                width="900"
-                height="1200"
-                fetchpriority="high"
-                className="h-full w-full object-cover"
-                style={{ objectPosition: '45% 38%' }}
-              />
-            </div>
-            <div className="absolute -bottom-2 -left-3 aspect-square w-[38%] overflow-hidden rounded-full border-[5px] border-white bg-mv-wash shadow-[0_18px_36px_-22px_rgba(31,77,74,.6)] md:-left-6">
-              <img
-                src="/assets/images/equipe/fernanda.webp"
-                alt="Dra. Fernanda Favali Kruger, responsável técnica"
-                width="900"
-                height="957"
-                className="h-full w-full object-cover"
-                style={{ objectPosition: '26% 26%', transform: 'scale(1.8)', transformOrigin: '27% 27%' }}
-              />
-            </div>
-            <span className="absolute -right-1 top-3 grid aspect-square w-[26%] place-items-center rounded-full bg-white shadow-[0_14px_30px_-18px_rgba(31,77,74,.5)] md:-right-3">
-              <img src="/assets/images/mil-vacinas-logo.webp" alt="Mil Vacinas" width="800" height="609" className="h-auto w-[74%]" />
-            </span>
+          <div
+            className="grid aspect-square w-[200px] place-items-center rounded-full md:w-[min(100%,420px)]"
+            style={{ background: 'radial-gradient(circle at 50% 45%, #fff 0, #fff 60%, #E7F2F0 61%, #E7F2F0 100%)' }}
+          >
+            <img
+              src="/assets/images/mil-vacinas-logo.webp"
+              alt="Mil Vacinas"
+              width="800"
+              height="609"
+              fetchpriority="high"
+              className="h-auto w-[72%] drop-shadow-[0_10px_18px_rgba(31,77,74,.18)]"
+            />
           </div>
           <figcaption className="hidden text-center text-[13px] leading-snug text-mv-muted lg:block">
             <span className="kicker mb-0.5 block text-[11px]">{t('hero.rtLabel')}</span>
