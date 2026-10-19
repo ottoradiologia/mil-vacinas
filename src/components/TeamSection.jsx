@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 
 // Site atual da Dra. Fernanda (trocar pelo domínio próprio quando estiver no ar).
-const PEDIATRICS_URL = 'https://site-fernanda-oficial.vercel.app/';
+const PEDIATRICS_URL = 'https://drafernandapediatra.com.br/';
 
 const TeamSection = () => {
   const { t } = useTranslation();

@@ -23,4 +23,4 @@
 
 ## Páginas
 - [Início](https://www.milvacinas.com.br/): vacinas por faixa etária, como funciona, vacinação domiciliar, plano vacinal, equipe e localização
-- [Dra. Fernanda Favali Kruger – Pediatra](https://site-fernanda-oficial.vercel.app/): consultório de pediatria no mesmo endereço
+- [Dra. Fernanda Favali Kruger – Pediatra](https://drafernandapediatra.com.br/): consultório de pediatria no mesmo endereço
