@@ -67,15 +67,15 @@ const HeroSection = () => {
         <figure className="order-first m-0 grid justify-items-center gap-5 lg:order-none">
           <div
             className="grid aspect-square w-[200px] place-items-center rounded-full md:w-[min(100%,420px)]"
-            style={{ background: 'radial-gradient(circle at 50% 45%, #fff 0, #fff 60%, #E7F2F0 61%, #E7F2F0 100%)' }}
+            style={{ background: '#fff' }}
           >
             <img
-              src="/assets/images/mil-vacinas-logo.webp"
+              src="/assets/images/mil-vacinas-logo-original.webp"
               alt="Mil Vacinas"
-              width="800"
-              height="609"
+              width="846"
+              height="644"
               fetchpriority="high"
-              className="h-auto w-[72%] drop-shadow-[0_10px_18px_rgba(31,77,74,.18)]"
+              className="h-auto w-[66%]"
             />
           </div>
           <figcaption className="hidden text-center text-[13px] leading-snug text-mv-muted lg:block">
