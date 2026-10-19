@@ -84,3 +84,4 @@ jspm_packages/
 .DS_Store
 Thumbs.db
 .vercel
+dist-ssr

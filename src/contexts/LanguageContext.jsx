@@ -14,8 +14,8 @@ export const useLanguage = () => {
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
-    // Tentar recuperar do localStorage
-    const savedLanguage = localStorage.getItem('language');
+    // Tentar recuperar do localStorage (não existe na pré-renderização do build)
+    const savedLanguage = typeof window !== 'undefined' ? window.localStorage.getItem('language') : null;
     if (savedLanguage) {
       return savedLanguage;
     }
