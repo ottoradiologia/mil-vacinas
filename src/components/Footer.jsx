@@ -3,7 +3,7 @@ import { MapPin } from 'lucide-react';
 import GoogleMaps from './GoogleMaps';
 import { useTranslation } from '../hooks/useTranslation';
 
-const PEDIATRICS_URL = 'https://site-fernanda-oficial.vercel.app/';
+const PEDIATRICS_URL = 'https://drafernandapediatra.com.br/';
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Rua Afonso de Freitas, 59, Paraíso, São Paulo - SP, 04006-050')}`;
 
 const Footer = () => {
