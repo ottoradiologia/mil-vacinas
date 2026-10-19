@@ -15,11 +15,11 @@
 - CNPJ 12.459.849/0001-07
 
 ## Vacinas
-- Crianças (0–12 anos): Hexavalente acelular, Pentavalente acelular, Pneumocócicas 13/15/20, Rotavírus pentavalente, Meningocócicas B e ACWY, Influenza, Febre amarela, Hepatite A, Tríplice viral, Varicela, Tetra viral, dTpa-VIP, Dengue, HPV nonavalente, Beyfortus (nirsevimabe)
+- Crianças (0–12 anos): Hexavalente acelular, Pentavalente acelular, Pneumocócicas 15 e 20, Rotavírus pentavalente, Meningocócicas B e ACWY, Influenza, Febre amarela, Hepatite A, Tríplice viral, Varicela, Tetra viral, dTpa-VIP, Dengue, HPV nonavalente, Beyfortus (nirsevimabe)
 - Adolescentes: HPV nonavalente, dTpa-VIP, Meningocócicas B e ACWY, Febre amarela, Dengue, Hepatites A e A+B, Influenza, Pneumocócicas
 - Adultos: Hepatite A+B, dTpa, Tríplice viral, Varicela, Febre amarela, Pneumocócicas, Influenza, Meningocócicas, Dengue, HPV
 - Gestantes: Hepatite B, dTpa, Influenza, VSR
-- Idosos (60+): Influenza (incluindo a versão 60+), Pneumocócicas 13/15/20, VSR, Herpes zóster, dTpa, Tríplice viral, Hepatite A+B, Meningocócica ACWY
+- Idosos (60+): Influenza (incluindo a versão 60+), Pneumocócicas 15 e 20, VSR, Herpes zóster, dTpa, Tríplice viral, Hepatite A+B, Meningocócica ACWY
 
 ## Páginas
 - [Início](https://www.milvacinas.com.br/): vacinas por faixa etária, como funciona, vacinação domiciliar, plano vacinal, equipe e localização

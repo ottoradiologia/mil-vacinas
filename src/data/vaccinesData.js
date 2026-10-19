@@ -5,7 +5,6 @@ export const vaccinesData = {
     icon: 'Baby',
     vaccines: [
       'hexavalente_acelular',
-      'pneumococica_13',
       'pneumococica_15',
       'rotavirus_pentavalente',
       'meningococica_acwy',
@@ -39,7 +38,6 @@ export const vaccinesData = {
       'hepatite_ab',
       'influenza_quadrivalente',
       'pneumococica_20',
-      'pneumococica_13',
       'pneumococica_15'
     ]
   },
@@ -53,7 +51,6 @@ export const vaccinesData = {
       'triplice_viral',
       'varicela',
       'febre_amarela',
-      'pneumococica_13',
       'pneumococica_15',
       'influenza_quadrivalente',
       'meningococica_acwy',
@@ -81,7 +78,6 @@ export const vaccinesData = {
     vaccines: [
       'triplice_viral',
       'dtpa',
-      'pneumococica_13',
       'pneumococica_15',
       'vsr',
       'influenza_quadrivalente_60',
