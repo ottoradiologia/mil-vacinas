@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check } from 'lucide-react';
+import { Check, MessageCircle } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
 // Bairros ao redor do Paraíso, em km a partir da clínica (x = leste, y = norte).
@@ -87,8 +87,10 @@ const HomeVaccinationSection = () => {
           </ol>
 
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-heart">
+            <MessageCircle size={18} aria-hidden="true" />
             {t('home.cta')}
           </a>
+          <p className="mt-2 text-[13.5px] text-mv-muted">{t('cta.whatsappHint')}</p>
         </div>
 
         <figure className="m-0 w-full max-w-[440px] justify-self-center">

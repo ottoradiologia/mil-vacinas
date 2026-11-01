@@ -375,6 +375,7 @@
     "title": "Find the right vaccine for each age",
     "subtitle": "Choose the age group. If you cannot find the vaccine you need, talk to our team on WhatsApp.",
     "protects": "Protects against",
+    "highlight": "Featured",
     "schedule": "Book",
     "showing": "Showing {shown} of {total} vaccines for {group}.",
     "showAll": "See all",
@@ -434,7 +435,7 @@
   },
   "clinicInfo": {
     "kicker": "At the clinic",
-    "title": "How it works at the clinic",
+    "title": "Get vaccinated at the clinic, 3 minutes from the subway.",
     "items": [
       {
         "title": "Book on WhatsApp",
@@ -448,7 +449,14 @@
         "title": "Pay your way",
         "text": "Pix, cash, credit and debit card or payment link."
       }
-    ]
+    ],
+    "cta": "Book at the clinic",
+    "addressLabel": "Address",
+    "hoursLabel": "Hours",
+    "hoursValue": "Mon–Fri, 9am–6pm",
+    "metroLabel": "Subway",
+    "paymentLabel": "Payment",
+    "paymentValue": "Pix, cash, card or payment link"
   },
   "teamDesign": {
     "kicker": "About us",
@@ -484,6 +492,15 @@
     "siblingName": "Dr. Fernanda Favali Kruger",
     "siblingText": "Pediatric practice",
     "map": "Open in Google Maps",
-    "whereTitle": "Where to find us"
+    "whereTitle": "Where to find us",
+    "call": "Call this number"
+  },
+  "cta": {
+    "whatsappHint": "Opens WhatsApp with a ready message",
+    "hours": "Mon–Fri, 9am–6pm"
+  },
+  "closing": {
+    "title": "Ready to get vaccinated?",
+    "text": "Tell us who is getting vaccinated and our team will guide you to the right vaccines for each age."
   }
 }

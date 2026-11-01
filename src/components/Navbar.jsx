@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
 const WHATSAPP_URL = 'https://wa.me/5511973139542';
@@ -31,7 +31,7 @@ const Navbar = () => {
         type="button"
         onClick={() => changeLanguage('pt')}
         aria-pressed={language === 'pt'}
-        className={`rounded px-1.5 py-1 ${language === 'pt' ? 'text-mv-petrol' : 'text-mv-muted hover:text-mv-petrol'}`}
+        className={`grid min-h-[44px] min-w-[36px] place-items-center rounded ${language === 'pt' ? 'text-mv-petrol' : 'text-mv-muted hover:text-mv-petrol'}`}
       >
         PT
       </button>
@@ -40,7 +40,7 @@ const Navbar = () => {
         type="button"
         onClick={() => changeLanguage('en')}
         aria-pressed={language === 'en'}
-        className={`rounded px-1.5 py-1 ${language === 'en' ? 'text-mv-petrol' : 'text-mv-muted hover:text-mv-petrol'}`}
+        className={`grid min-h-[44px] min-w-[36px] place-items-center rounded ${language === 'en' ? 'text-mv-petrol' : 'text-mv-muted hover:text-mv-petrol'}`}
       >
         EN
       </button>
@@ -77,7 +77,8 @@ const Navbar = () => {
 
             <div className="hidden items-center gap-4 lg:flex">
               <LanguageSwitch />
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary px-[18px] py-2.5 text-sm">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" title={t('cta.whatsappHint')} className="btn-primary px-[18px] py-2.5 text-sm">
+                <MessageCircle size={16} aria-hidden="true" />
                 {t('nav.schedule')}
               </a>
             </div>
@@ -118,7 +119,8 @@ const Navbar = () => {
         className="fixed bottom-0 left-0 right-0 z-40 flex gap-2 border-t border-mv-line bg-white/95 px-3 pt-2.5 backdrop-blur lg:hidden"
         style={{ paddingBottom: 'calc(10px + env(safe-area-inset-bottom, 0px))' }}
       >
-        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary flex-1 px-3 text-sm">
+        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" title={t('cta.whatsappHint')} className="btn-primary flex-1 px-3 text-sm">
+          <MessageCircle size={16} aria-hidden="true" />
           {t('nav.scheduleVaccine')}
         </a>
         <button type="button" onClick={() => scrollToSection('home-vaccination')} className="btn-secondary flex-1 px-3 text-sm">

@@ -1,14 +1,16 @@
+// highlights: aparecem primeiro na aba, com selo "Destaque"
 export const vaccinesData = {
   crianca: {
     title: 'Para Crianças',
     subtitle: '0-12 anos',
     icon: 'Baby',
+    highlights: ['meningococica_b', 'meningococica_acwy'],
     vaccines: [
+      'meningococica_b',
+      'meningococica_acwy',
       'hexavalente_acelular',
       'pneumococica_15',
       'rotavirus_pentavalente',
-      'meningococica_acwy',
-      'meningococica_b',
       'influenza_quadrivalente',
       'febre_amarela',
       'hepatite_a',
@@ -45,7 +47,11 @@ export const vaccinesData = {
     title: 'Para Adultos',
     subtitle: '20-59 anos',
     icon: 'Users',
+    highlights: ['herpes_zoster', 'hpv_nonavalente', 'vsr'],
     vaccines: [
+      'herpes_zoster',
+      'hpv_nonavalente',
+      'vsr',
       'hepatite_ab',
       'dtpa',
       'triplice_viral',
@@ -56,35 +62,35 @@ export const vaccinesData = {
       'meningococica_acwy',
       'meningococica_b',
       'pneumococica_20',
-      'dengue',
-      'hpv_nonavalente'
+      'dengue'
     ]
   },
   gestante: {
     title: 'Para Gestantes',
     subtitle: 'Todas as idades',
     icon: 'Heart',
+    highlights: ['vsr'],
     vaccines: [
+      'vsr',
       'hepatite_b',
       'dtpa',
-      'influenza_quadrivalente',
-      'vsr'
+      'influenza_quadrivalente'
     ]
   },
   idoso: {
     title: 'Para Idosos',
     subtitle: '+60 anos',
     icon: 'Stethoscope',
+    highlights: ['herpes_zoster', 'pneumococica_20'],
     vaccines: [
-      'triplice_viral',
+      'herpes_zoster',
+      'pneumococica_20',
+      'influenza_quadrivalente_60',
+      'vsr',
       'dtpa',
       'pneumococica_15',
-      'vsr',
-      'influenza_quadrivalente_60',
       'hepatite_ab',
-      'pneumococica_20',
       'meningococica_acwy',
-      'herpes_zoster',
       'influenza_quadrivalente'
     ]
   }

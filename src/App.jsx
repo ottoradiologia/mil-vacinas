@@ -10,6 +10,7 @@ import HowItWorksSection from './components/HowItWorksSection';
 import TeamSection from './components/TeamSection';
 import SpaceSection from './components/SpaceSection';
 import CompaniesSection from './components/CompaniesSection';
+import ClosingSection from './components/ClosingSection';
 import Footer from './components/Footer';
 
 function App() {
@@ -45,6 +46,9 @@ function App() {
 
           {/* Empresas */}
           <CompaniesSection />
+
+          {/* Fechamento: último convite para as famílias */}
+          <ClosingSection />
         </main>
 
         <Footer />

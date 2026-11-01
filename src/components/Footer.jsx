@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin } from 'lucide-react';
+import { MapPin, Phone } from 'lucide-react';
 import GoogleMaps from './GoogleMaps';
 import { useTranslation } from '../hooks/useTranslation';
 
@@ -44,15 +44,18 @@ const Footer = () => {
             href="https://wa.me/5511973139542"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-display text-xl font-bold text-mv-petrol hover:text-mv-teal"
+            className="inline-flex min-h-[44px] items-center font-display text-xl font-bold text-mv-petrol hover:text-mv-teal"
             style={{ fontVariationSettings: '"wdth" 90', fontVariantNumeric: 'tabular-nums' }}
           >
             (11) 97313-9542
           </a>
           <p>{t('footerDesign.hoursLine')}</p>
-          <p className="mt-3 grid gap-0.5">
-            <a href="mailto:milvacinas@gmail.com" className="hover:text-mv-teal">milvacinas@gmail.com</a>
-            <a href="https://www.instagram.com/milvacinas/" target="_blank" rel="noopener noreferrer" className="hover:text-mv-teal">@milvacinas</a>
+          <a href="tel:+5511973139542" className="mt-1 inline-flex min-h-[44px] items-center gap-1.5 font-bold text-mv-teal hover:underline">
+            <Phone size={15} aria-hidden="true" /> {t('footerDesign.call')}
+          </a>
+          <p className="mt-2 grid justify-items-start">
+            <a href="mailto:milvacinas@gmail.com" className="inline-flex min-h-[36px] items-center hover:text-mv-teal">milvacinas@gmail.com</a>
+            <a href="https://www.instagram.com/milvacinas/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[36px] items-center hover:text-mv-teal">@milvacinas</a>
           </p>
         </div>
 

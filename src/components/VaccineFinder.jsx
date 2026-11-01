@@ -3,7 +3,6 @@ import { vaccinesData } from '../data/vaccinesData';
 import { useTranslation } from '../hooks/useTranslation';
 
 const WHATSAPP_NUMBER = '5511973139542';
-const INITIAL_COUNT = 6;
 const GROUPS = ['crianca', 'adolescente', 'adulto', 'gestante', 'idoso'];
 
 // Abas por idade + cartões no espírito da carteirinha de vacinação.
@@ -11,17 +10,13 @@ const GROUPS = ['crianca', 'adolescente', 'adulto', 'gestante', 'idoso'];
 const VaccineFinder = () => {
   const { t } = useTranslation();
   const [active, setActive] = useState(0);
-  const [expanded, setExpanded] = useState(false);
 
   const groupId = GROUPS[active];
   const groupTitle = t(`finder.groups.${groupId}.title`);
   const vaccines = vaccinesData[groupId].vaccines;
-  const visible = expanded ? vaccines : vaccines.slice(0, INITIAL_COUNT);
+  const highlights = vaccinesData[groupId].highlights ?? [];
 
-  const select = (index) => {
-    setActive(index);
-    setExpanded(false);
-  };
+  const select = (index) => setActive(index);
 
   const onTabKeyDown = (event) => {
     if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
@@ -35,11 +30,6 @@ const VaccineFinder = () => {
     const message = t('finder.whatsappVaccine').replace('{vaccine}', vaccineName);
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   };
-
-  const showing = t('finder.showing')
-    .replace('{shown}', visible.length)
-    .replace('{total}', vaccines.length)
-    .replace('{group}', groupTitle.toLowerCase());
 
   return (
     <section id="vaccines-section" className="bg-white px-4 pb-8 pt-16 sm:px-6 md:pb-10 md:pt-24 lg:px-8">
@@ -86,17 +76,23 @@ const VaccineFinder = () => {
         </div>
 
         <div id="finder-panel" role="tabpanel" aria-labelledby={`finder-tab-${groupId}`} className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {visible.map((vaccineId) => {
+          {vaccines.map((vaccineId) => {
             const name = t(`vaccines.items.${vaccineId}`);
+            const highlighted = highlights.includes(vaccineId);
             return (
               <a
                 key={vaccineId}
                 href={whatsappFor(name)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card relative flex flex-col overflow-hidden"
+                className={`card relative flex flex-col overflow-hidden ${highlighted ? 'ring-2 ring-mv-heart' : ''}`}
               >
                 <div className="grid gap-1.5 px-5 pb-4 pt-[18px]">
+                  {highlighted && (
+                    <span className="mb-1 w-fit rounded-full bg-mv-heart px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.08em] text-mv-heartInk">
+                      ★ {t('finder.highlight')}
+                    </span>
+                  )}
                   <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-mv-muted">{t('finder.protects')}</span>
                   <h3 className="font-display text-[21px] font-bold leading-tight text-mv-petrol" style={{ fontVariationSettings: '"wdth" 88' }}>
                     {name}
@@ -113,15 +109,6 @@ const VaccineFinder = () => {
             );
           })}
         </div>
-
-        <p className="mt-4 text-sm text-mv-muted">
-          {showing}{' '}
-          {vaccines.length > INITIAL_COUNT && (
-            <button type="button" onClick={() => setExpanded(!expanded)} className="font-bold text-mv-teal hover:underline">
-              {expanded ? t('finder.showLess') : `${t('finder.showAll')} →`}
-            </button>
-          )}
-        </p>
       </div>
     </section>
   );

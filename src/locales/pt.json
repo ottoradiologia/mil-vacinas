@@ -375,6 +375,7 @@
     "title": "Encontre a vacina certa para cada idade",
     "subtitle": "Escolha a faixa etária. Se não encontrar a vacina que procura, fale com a equipe pelo WhatsApp.",
     "protects": "Protege contra",
+    "highlight": "Destaque",
     "schedule": "Agendar",
     "showing": "Mostrando {shown} de {total} vacinas para {group}.",
     "showAll": "Ver todas",
@@ -434,7 +435,7 @@
   },
   "clinicInfo": {
     "kicker": "Na clínica",
-    "title": "Como funciona na clínica",
+    "title": "Vacine na clínica, a 3 minutos do metrô.",
     "items": [
       {
         "title": "Agende pelo WhatsApp",
@@ -448,7 +449,14 @@
         "title": "Pague como preferir",
         "text": "Pix, dinheiro, cartão de crédito e débito ou link de pagamento."
       }
-    ]
+    ],
+    "cta": "Agendar na clínica",
+    "addressLabel": "Endereço",
+    "hoursLabel": "Horário",
+    "hoursValue": "Seg a sex, 9h às 18h",
+    "metroLabel": "Metrô",
+    "paymentLabel": "Pagamento",
+    "paymentValue": "Pix, dinheiro, cartão ou link de pagamento"
   },
   "teamDesign": {
     "kicker": "Quem somos",
@@ -484,6 +492,15 @@
     "siblingName": "Dra. Fernanda Favali Kruger",
     "siblingText": "Consultório de pediatria",
     "map": "Abrir no Google Maps",
-    "whereTitle": "Onde nos encontrar"
+    "whereTitle": "Onde nos encontrar",
+    "call": "Ligar para este número"
+  },
+  "cta": {
+    "whatsappHint": "Abre o WhatsApp com a mensagem pronta",
+    "hours": "Atendimento de seg a sex, 9h às 18h"
+  },
+  "closing": {
+    "title": "Pronto para vacinar?",
+    "text": "Conte quem vai se vacinar e a equipe orienta as vacinas certas para cada idade."
   }
 }
