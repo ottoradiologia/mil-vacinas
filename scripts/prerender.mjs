@@ -1,18 +1,25 @@
-// Pré-renderiza a home no build: coloca o HTML do React dentro de dist/index.html,
-// para que buscadores e robôs de IA leiam o conteúdo sem executar JavaScript.
+// Pré-renderiza as páginas no build: coloca o HTML do React dentro do index.html de cada uma,
+// para que buscadores, robôs de IA e prévias de link leiam o conteúdo sem executar JavaScript.
 import { readFileSync, writeFileSync, rmSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const { render } = await import(pathToFileURL(path.join(root, 'dist-ssr', 'entry-server.js')).href);
+const { render, renderBlack } = await import(pathToFileURL(path.join(root, 'dist-ssr', 'entry-server.js')).href);
 
-const indexPath = path.join(root, 'dist', 'index.html');
-const template = readFileSync(indexPath, 'utf-8');
+const pages = [
+  { file: 'index.html', render },
+  { file: path.join('black', 'index.html'), render: renderBlack },
+];
+
 const marker = '<div id="root"></div>';
-if (!template.includes(marker)) throw new Error('Marcador <div id="root"></div> não encontrado em dist/index.html');
+for (const page of pages) {
+  const filePath = path.join(root, 'dist', page.file);
+  const template = readFileSync(filePath, 'utf-8');
+  if (!template.includes(marker)) throw new Error(`Marcador <div id="root"></div> não encontrado em dist/${page.file}`);
+  const html = template.replace(marker, `<div id="root">${page.render()}</div>`);
+  writeFileSync(filePath, html);
+  console.log(`Pré-renderizado: dist/${page.file} (${Math.round(html.length / 1024)} KB)`);
+}
 
-const html = template.replace(marker, `<div id="root">${render()}</div>`);
-writeFileSync(indexPath, html);
 rmSync(path.join(root, 'dist-ssr'), { recursive: true, force: true });
-console.log(`Pré-renderizado: dist/index.html (${Math.round(html.length / 1024)} KB)`);
