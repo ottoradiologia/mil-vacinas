@@ -29,6 +29,12 @@ export default {
         text: '#14302F',
         textSecondary: '#557270',
       },
+      keyframes: {
+        marquee: { from: { transform: 'translateX(0)' }, to: { transform: 'translateX(-50%)' } },
+      },
+      animation: {
+        marquee: 'marquee 30s linear infinite',
+      },
       fontFamily: {
         sans: ['Figtree', 'Segoe UI', 'system-ui', 'sans-serif'],
         display: ['Archivo', 'Arial Narrow', 'system-ui', 'sans-serif'],
