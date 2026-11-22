@@ -11,6 +11,7 @@ import TeamSection from './components/TeamSection';
 import SpaceSection from './components/SpaceSection';
 import CompaniesSection from './components/CompaniesSection';
 import Footer from './components/Footer';
+import BlackFridayBanner from './components/BlackFridayBanner';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         <Navbar />
 
         <main>
+          {/* Black Friday (novembro/2026): leva para /black */}
+          <BlackFridayBanner />
+
           {/* Topo: onde vacinar (clínica ou casa) */}
           <div id="home">
             <HeroSection />
